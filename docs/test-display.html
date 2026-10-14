@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サイトでテスト表示 - Kashiwazaki SEO StayPop マニュアル</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <button class="hamburger-btn" aria-label="メニューを開く">&#9776;</button>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2 style="color:#fff;">SEO StayPop</h2>
+            <span class="version">v1.0.0</span>
+            <img src="images/main-visual.png" alt="" style="width:100%;border-radius:4px;margin-top:8px;">
+        </div>
+        <ul>
+            <li><a href="index.html">概要</a></li>
+            <li><a href="setup.html">インストール・初期設定</a></li>
+            <li><a href="banners.html">バナー一覧</a></li>
+            <li><a href="editor.html">編集画面の見方</a></li>
+            <li><a href="editor-content.html">内容タブ</a></li>
+            <li><a href="editor-design.html">デザインタブ</a></li>
+            <li><a href="editor-timing.html">表示のタイミングタブ</a></li>
+            <li><a href="editor-pages.html">表示するページタブ</a></li>
+            <li><a href="editor-schedule.html">回数・期間タブ</a></li>
+            <li><a href="editor-audience.html">出し分けタブ</a></li>
+            <li><a href="editor-measure.html">成果・A/Bテストタブ</a></li>
+            <li><a href="test-display.html" class="active">サイトでテスト表示</a></li>
+            <li><a href="formats.html">サイトでの表示</a></li>
+            <li><a href="stats.html">集計タブ</a></li>
+            <li><a href="settings.html">設定タブ</a></li>
+            <li><a href="glossary.html">用語集</a></li>
+            <li><a href="troubleshooting.html">トラブルシューティング</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <h1>サイトでテスト表示</h1>
+        <p class="lead">保存したバナーを、サイトのトップページで実際に表示して試す機能です。画面の左下に、あと何をすれば表示されるかが出ます。</p>
+
+        <figure class="infographic">
+            <img src="images/infographics/test-display.png" alt="テスト表示の使い方の流れ">
+            <figcaption>保存 → サイトでテスト表示 → 左下のチェックリストを見る → きっかけを起こして確かめる</figcaption>
+        </figure>
+
+        <h2>開き方</h2>
+        <div class="step"><div class="step-number">1</div><div class="step-content"><p>編集画面でバナーを<strong>保存</strong>します（下書きでも構いません）。</p></div></div>
+        <div class="step"><div class="step-number">2</div><div class="step-content"><p>プレビューの下の<strong>「サイトでテスト表示」</strong>を押します。バナー一覧の行の<strong>「テスト表示」</strong>からも開けます。</p></div></div>
+        <div class="step"><div class="step-number">3</div><div class="step-content"><p>新しいタブでサイトのトップページが開き、画面の左下に<strong>「テスト表示中：（バナーの名前）」</strong>の箱が表示されます。</p></div></div>
+        <div class="step"><div class="step-number">4</div><div class="step-content"><p>箱に書かれた操作（例:「マウスを画面の上端から外に出す」）を行い、バナーが表示されることを確かめます。</p></div></div>
+
+        <figure class="screenshot">
+            <img src="images/screenshots/23-test-waiting.png" alt="テスト表示を開いたところ" class="lightbox-trigger">
+            <figcaption>テスト表示を開いたところ。左下の箱に、表示までに必要なことが並びます</figcaption>
+        </figure>
+
+        <h2>テスト表示の決まり</h2>
+        <table>
+            <thead>
+                <tr><th style="width:40%;">項目</th><th>テスト表示では</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>表示するページ・出し分け</td><td>無視します（トップページで表示します）</td></tr>
+                <tr><td>掲載期間・表示する回数・閉じたあとの日数</td><td>無視します（何度でも試せます）</td></tr>
+                <tr><td>サイトに表示する（オン・オフ）・下書き</td><td>無視します（停止中や下書きのバナーも試せます）</td></tr>
+                <tr><td>表示のタイミング（きっかけ・開いた直後・入力中）</td><td><strong>ふだんと同じ</strong>に働きます</td></tr>
+                <tr><td>集計</td><td>記録しません</td></tr>
+                <tr><td>ほかのバナー</td><td>表示しません（試しているバナーだけです）</td></tr>
+                <tr><td>内容</td><td><strong>保存した内容</strong>で表示します。保存していない変更は反映されません</td></tr>
+            </tbody>
+        </table>
+
+        <h2>左下の箱の見方</h2>
+        <p>箱の中身は、0.5 秒ごとに書き換わります。満たした項目には ✓ が付きます。</p>
+        <figure class="screenshot">
+            <img src="images/screenshots/23b-testbar-blocked.png" alt="きっかけが見送られたときの箱" class="lightbox-trigger">
+            <figcaption>開いた直後にマウスを上端から出したとき。「直前のきっかけ：開いた直後のため待機中」と表示されます</figcaption>
+        </figure>
+
+        <table>
+            <thead>
+                <tr><th style="width:42%;">表示</th><th>意味</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>マウスを画面の上端から外に出す</td><td>PC で、マウスが上端から外に出たときのきっかけを試します。</td></tr>
+                <tr><td>下に読んだあと、上に戻るスクロールをする</td><td>スマホで、上に戻るスクロールのきっかけを試します。</td></tr>
+                <tr><td>ページを ○ 秒見る（いま ○ 秒）</td><td>「○秒見たとき」のきっかけです。いま何秒たったかが表示されます。</td></tr>
+                <tr><td>○% までスクロールする（いま ○%）</td><td>「○％までスクロールしたとき」のきっかけです。いまどこまで読んだかが表示されます。</td></tr>
+                <tr><td>開いてから ○ 秒は表示しない</td><td>「開いた直後」の秒数です。過ぎると ✓ が付きます。</td></tr>
+                <tr><td>組み合わせ：すべて満たしたとき</td><td>「すべてそろったとき」を選んでいるときに表示されます。</td></tr>
+                <tr><td>直前のきっかけ：画面に出ていない</td><td>きっかけが起きたとき、ページが画面に出ていなかった（別のタブを見ていた）ため見送りました。</td></tr>
+                <tr><td>直前のきっかけ：開いた直後のため待機中</td><td>「開いた直後」の秒数の間だったため見送りました。</td></tr>
+                <tr><td>直前のきっかけ：入力中のため見送り</td><td>フォームに入力中（または入力のあと 10 秒以内）だったため見送りました。</td></tr>
+                <tr><td>直前のきっかけ：マウスの移動が少ないため見送り</td><td>ページを開いてからのマウスの動きが少なかったため見送りました。マウスを少し動かしてから試してください。</td></tr>
+                <tr><td>表示しました（閉じると、もう一度試せます）</td><td>バナーを表示しました。</td></tr>
+                <tr><td>この端末（PC / スマホ）では表示する条件がありません</td><td>いまの端末で使えるきっかけがありません。表示のタイミングタブを見直してください。</td></tr>
+            </tbody>
+        </table>
+
+        <figure class="screenshot">
+            <img src="images/screenshots/24-test-shown.png" alt="テスト表示でバナーが表示されたところ" class="lightbox-trigger">
+            <figcaption>バナーが表示されたところ。左下の箱に「表示しました」と出ます</figcaption>
+        </figure>
+
+        <h2>もう一度試す</h2>
+        <p>バナーを閉じたあと、箱の<strong>「もう一度試す」</strong>を押すと、もう一度きっかけを待ちます。「開いた直後」の秒数はページを開いたときから数えるので、もう一度その秒数を待つ必要はありません。最初からやり直したいときは、ページを読み込み直します。</p>
+        <h2>スマホで試すには</h2>
+        <p>テスト表示は、開いた端末で判断します。スマホの表示を試すには、スマホで WordPress にログインしてから編集画面の「サイトでテスト表示」を押すか、パソコンのブラウザの幅を狭くして（目安として 782px 以下）ページを読み込み直します。</p>
+        <div class="callout callout-warning">
+            <p>テスト表示は、そのバナーを編集できる人がログインしているときだけ使えます。リンクには有効期限があり、時間がたったリンクや、権限のない人が開いたときは、テスト表示にならずに<strong>ふつうのページとして開きます</strong>。そのときは編集画面を開き直してから、もう一度ボタンを押してください。</p>
+        </div>
+
+        <div class="callout callout-note">
+            <p>テスト表示の箱とバナーは、ボタンを押したあなたのブラウザにだけ表示されます。ほかの訪問者には見えません。</p>
+        </div>
+
+
+        <nav class="page-nav">
+            <a href="editor-measure.html" class="prev">&laquo; 成果・A/Bテストタブ</a>
+            <a href="formats.html" class="next">サイトでの表示 &raquo;</a>
+        </nav>
+
+        <footer class="manual-footer">
+            <p>作者: <a href="https://www.tsuyoshikashiwazaki.jp/profile/" target="_blank" rel="noopener">柏崎剛（Tsuyoshi Kashiwazaki）</a></p>
+            <p>プラグイン: Kashiwazaki SEO StayPop v1.0.0 | <a href="https://github.com/TsuyoshiKashiwazaki/wp-plugin-kashiwazaki-seo-staypop" target="_blank" rel="noopener">GitHub</a></p>
+        </footer>
+    </main>
+
+    <div class="lightbox"></div>
+    <script src="js/manual.js"></script>
+</body>
+</html>

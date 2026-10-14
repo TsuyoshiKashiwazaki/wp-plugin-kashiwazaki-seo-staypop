@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>出し分けタブ - Kashiwazaki SEO StayPop マニュアル</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <button class="hamburger-btn" aria-label="メニューを開く">&#9776;</button>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2 style="color:#fff;">SEO StayPop</h2>
+            <span class="version">v1.0.0</span>
+            <img src="images/main-visual.png" alt="" style="width:100%;border-radius:4px;margin-top:8px;">
+        </div>
+        <ul>
+            <li><a href="index.html">概要</a></li>
+            <li><a href="setup.html">インストール・初期設定</a></li>
+            <li><a href="banners.html">バナー一覧</a></li>
+            <li><a href="editor.html">編集画面の見方</a></li>
+            <li><a href="editor-content.html">内容タブ</a></li>
+            <li><a href="editor-design.html">デザインタブ</a></li>
+            <li><a href="editor-timing.html">表示のタイミングタブ</a></li>
+            <li><a href="editor-pages.html">表示するページタブ</a></li>
+            <li><a href="editor-schedule.html">回数・期間タブ</a></li>
+            <li><a href="editor-audience.html" class="active">出し分けタブ</a></li>
+            <li><a href="editor-measure.html">成果・A/Bテストタブ</a></li>
+            <li><a href="test-display.html">サイトでテスト表示</a></li>
+            <li><a href="formats.html">サイトでの表示</a></li>
+            <li><a href="stats.html">集計タブ</a></li>
+            <li><a href="settings.html">設定タブ</a></li>
+            <li><a href="glossary.html">用語集</a></li>
+            <li><a href="troubleshooting.html">トラブルシューティング</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <h1>出し分けタブ</h1>
+        <p class="lead">バナーを表示する訪問者を、ログインの状態・ユーザーの権限・流入元・参照元のサイトで絞り込むタブです。何も指定しなければ、すべての訪問者に表示します。</p>
+
+        <figure class="screenshot">
+            <img src="images/screenshots/20-tab-audience.png" alt="出し分けタブ" class="lightbox-trigger">
+            <figcaption>出し分けタブ（何も指定していない状態。欄の薄い文字は書き方の例です）</figcaption>
+        </figure>
+
+        <figure class="infographic">
+            <img src="images/infographics/audience-filter.png" alt="4つの条件をすべて満たした訪問者にだけ表示する">
+            <figcaption>指定した条件を<strong>すべて</strong>満たした訪問者にだけ表示します</figcaption>
+        </figure>
+
+        <h2>項目の一覧</h2>
+        <table>
+            <thead>
+                <tr><th style="width:26%;">項目</th><th style="width:26%;">種類</th><th style="width:22%;">初期値</th><th>空のとき</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>ログイン</td><td>プルダウン</td><td>すべての訪問者</td><td>-</td></tr>
+                <tr><td>ユーザーの権限</td><td>チェックボックスの一覧</td><td>なし</td><td>権限で絞りません</td></tr>
+                <tr><td>流入元（utm_source）</td><td>複数行（1行に1つ）</td><td>空</td><td>流入元で絞りません</td></tr>
+                <tr><td>参照元のサイト</td><td>複数行（1行に1つ）</td><td>空</td><td>参照元で絞りません</td></tr>
+            </tbody>
+        </table>
+
+        <h2>ログイン</h2>
+        <table>
+            <thead>
+                <tr><th style="width:28%;">選択肢</th><th>表示する相手</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>すべての訪問者（初期値）</td><td>ログインしているかどうかに関係なく表示します。</td></tr>
+                <tr><td>ログイン中のみ</td><td>サイトにログインしている人にだけ表示します（会員向けの案内など）。</td></tr>
+                <tr><td>未ログインのみ</td><td>ログインしていない人にだけ表示します（会員登録の案内など）。</td></tr>
+            </tbody>
+        </table>
+
+        <h2>ユーザーの権限</h2>
+        <p>チェックした権限（管理者・編集者・投稿者・寄稿者・購読者など、サイトにある権限）の、<strong>ログイン中のユーザーにだけ</strong>表示します。何も選ばなければ、権限で絞りません。「ログイン」で「未ログインのみ」を選んでいるときは、この項目は表示されません。</p>
+        <h2>流入元（utm_source）</h2>
+        <p>ページの URL に付いている <code>utm_source=</code> の値が一致した人にだけ表示します。メールマガジンや SNS の投稿に付けたリンクから来た人だけに表示する、といった使い方をします。</p>
+        <ul>
+            <li>1行に1つずつ書きます。大文字と小文字は区別しません。</li>
+            <li><code>*</code> はどんな文字にも当てはまります（例: <code>news*</code> は newsletter・news_202610 などに当てはまります）。</li>
+        </ul>
+        <div class="callout callout-warning">
+            <p>判断するのは<strong>そのページの URL</strong>です。リンクから来た最初のページの URL には utm_source が付いていますが、同じ人がサイトの中の別のページに移ると、そのページの URL には付いていないため、表示されません。</p>
+        </div>
+
+        <h2>参照元のサイト</h2>
+        <p>どのサイトから来た人に表示するかを、ドメインで指定します。</p>
+        <ul>
+            <li><code>google.com</code> と書くと、<code>www.google.com</code> など、その下のドメインも含みます。</li>
+            <li><code>*.example.com</code> のように <code>*</code> も使えます。https:// から書いても構いません（ドメインの部分で判断します）。</li>
+        </ul>
+        <div class="callout callout-warning">
+            <p>ブラウザやリンクの設定によっては参照元が送られないため、そのサイトから来ていても一致しない人がいます。また、サイトの中でページを移ると、参照元は自分のサイトになります。</p>
+        </div>
+
+        <h2>組み合わせたとき</h2>
+        <p>複数の項目を指定したときは、<strong>すべてに当てはまる人</strong>にだけ表示します。例えば「ログイン中のみ」と流入元「newsletter」を指定すると、ログインしていて、かつ URL の utm_source が newsletter の人にだけ表示します。</p>
+        <div class="callout callout-note">
+            <p>出し分けの条件は、ページが作られるときに判断します。ページをまるごと保存して使い回す仕組み（ページキャッシュ）を使っているサイトでは、条件どおりに出し分けられないことがあります（<a href="troubleshooting.html">トラブルシューティング</a>）。</p>
+        </div>
+
+
+        <nav class="page-nav">
+            <a href="editor-schedule.html" class="prev">&laquo; 回数・期間タブ</a>
+            <a href="editor-measure.html" class="next">成果・A/Bテストタブ &raquo;</a>
+        </nav>
+
+        <footer class="manual-footer">
+            <p>作者: <a href="https://www.tsuyoshikashiwazaki.jp/profile/" target="_blank" rel="noopener">柏崎剛（Tsuyoshi Kashiwazaki）</a></p>
+            <p>プラグイン: Kashiwazaki SEO StayPop v1.0.0 | <a href="https://github.com/TsuyoshiKashiwazaki/wp-plugin-kashiwazaki-seo-staypop" target="_blank" rel="noopener">GitHub</a></p>
+        </footer>
+    </main>
+
+    <div class="lightbox"></div>
+    <script src="js/manual.js"></script>
+</body>
+</html>

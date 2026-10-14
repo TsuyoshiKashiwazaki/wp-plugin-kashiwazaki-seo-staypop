@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>サイトでの表示 - Kashiwazaki SEO StayPop マニュアル</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <button class="hamburger-btn" aria-label="メニューを開く">&#9776;</button>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2 style="color:#fff;">SEO StayPop</h2>
+            <span class="version">v1.0.0</span>
+            <img src="images/main-visual.png" alt="" style="width:100%;border-radius:4px;margin-top:8px;">
+        </div>
+        <ul>
+            <li><a href="index.html">概要</a></li>
+            <li><a href="setup.html">インストール・初期設定</a></li>
+            <li><a href="banners.html">バナー一覧</a></li>
+            <li><a href="editor.html">編集画面の見方</a></li>
+            <li><a href="editor-content.html">内容タブ</a></li>
+            <li><a href="editor-design.html">デザインタブ</a></li>
+            <li><a href="editor-timing.html">表示のタイミングタブ</a></li>
+            <li><a href="editor-pages.html">表示するページタブ</a></li>
+            <li><a href="editor-schedule.html">回数・期間タブ</a></li>
+            <li><a href="editor-audience.html">出し分けタブ</a></li>
+            <li><a href="editor-measure.html">成果・A/Bテストタブ</a></li>
+            <li><a href="test-display.html">サイトでテスト表示</a></li>
+            <li><a href="formats.html" class="active">サイトでの表示</a></li>
+            <li><a href="stats.html">集計タブ</a></li>
+            <li><a href="settings.html">設定タブ</a></li>
+            <li><a href="glossary.html">用語集</a></li>
+            <li><a href="troubleshooting.html">トラブルシューティング</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <h1>サイトでの表示</h1>
+        <p class="lead">訪問者から見たバナーの表示のされ方と、閉じ方・キーボードでの操作を説明します。</p>
+
+        <figure class="infographic">
+            <img src="images/infographics/formats.png" alt="中央ポップアップ・下部バナー・隅からのスライド表示の比較">
+            <figcaption>3つの表示形式</figcaption>
+        </figure>
+
+        <h2>中央ポップアップ</h2>
+        <p>画面全体を暗くして、中央にバナーを表示します。バナーを閉じるまで、後ろのページは操作できません。</p>
+        <figure class="screenshot">
+            <img src="images/screenshots/25-front-center.png" alt="中央ポップアップの表示" class="lightbox-trigger">
+            <figcaption>中央ポップアップ（PC）</figcaption>
+        </figure>
+
+        <ul>
+            <li>閉じ方: 右上の <strong>×</strong>、キーボードの <strong>Esc</strong>、<strong>暗い背景のクリック</strong>。</li>
+            <li>表示されると、キーボードの操作の位置（フォーカス）がボタン（ボタンがなければ ×）に移ります。Tab キーで移動しても、バナーの外には出ません。閉じると、元の位置に戻ります。</li>
+            <li>暗さは<a href="editor-design.html">デザインタブ</a>の「背景の暗さ」で変えられます。</li>
+        </ul>
+        <h2>下部バナー</h2>
+        <p>画面のいちばん下に、横長の帯で表示します。ページはそのまま読んだり操作したりできます。</p>
+        <figure class="screenshot">
+            <img src="images/screenshots/26-front-bottom.png" alt="下部バナーの表示" class="lightbox-trigger">
+            <figcaption>下部バナー（PC）。画像を入れた場合は左側に小さく表示されます</figcaption>
+        </figure>
+
+        <ul>
+            <li>閉じ方: 右端の <strong>×</strong>、キーボードの <strong>Esc</strong>。</li>
+            <li>幅の狭い画面では、中身を折り返して表示します。</li>
+        </ul>
+        <h2>隅からのスライド表示</h2>
+        <p>画面の隅（右下・左下・右上・左上）に、小さなカードが横から滑り込むように表示します。ページはそのまま読んだり操作したりできます。</p>
+        <figure class="screenshot">
+            <img src="images/screenshots/27-front-corner.png" alt="隅からのスライド表示" class="lightbox-trigger">
+            <figcaption>隅からのスライド表示（左下を選んだ例）</figcaption>
+        </figure>
+
+        <ul>
+            <li>閉じ方: 右上の <strong>×</strong>、キーボードの <strong>Esc</strong>。</li>
+            <li>幅は最大 380px です。</li>
+        </ul>
+        <h2>スマホでの表示</h2>
+        <figure class="screenshot">
+            <img src="images/screenshots/28-front-mobile.png" alt="スマホでの中央ポップアップ" class="lightbox-trigger">
+            <figcaption>スマホで上に戻るスクロールをしたときの中央ポップアップ（A/B テストのパターン B が表示された例）</figcaption>
+        </figure>
+
+        <p>スマホでは、<a href="editor-content.html">スマホ用の画像</a>と<a href="editor-design.html">スマホの幅</a>が使われます。幅を空欄にした場合は、画面の幅に合わせて表示します。</p>
+        <h2>どの形式にも共通すること</h2>
+        <table>
+            <thead>
+                <tr><th style="width:22%;">項目</th><th>内容</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>表示する数</td><td>1つのページで表示するバナーは1つだけです。一度表示したら、そのページではほかのバナーは表示しません。</td></tr>
+                <tr><td>閉じたとき</td><td>「閉じた」として数え、「閉じたあと ○ 日は表示しない」の日数を数え始めます。</td></tr>
+                <tr><td>ボタンを押したとき</td><td>「クリック」として数え、リンク先を開きます（新しいタブで開く設定なら新しいタブで）。中クリックで新しいタブに開いた場合もクリックとして数えます。</td></tr>
+                <tr><td>読み上げ</td><td>画面の読み上げソフトには、見出しを名前にしたダイアログとして伝わります（見出しがなければ「お知らせ」）。</td></tr>
+                <tr><td>動きを減らす設定</td><td>端末で「視差効果を減らす」「アニメーションを減らす」などを設定している人には、動きなしで表示します。</td></tr>
+            </tbody>
+        </table>
+
+
+        <nav class="page-nav">
+            <a href="test-display.html" class="prev">&laquo; サイトでテスト表示</a>
+            <a href="stats.html" class="next">集計タブ &raquo;</a>
+        </nav>
+
+        <footer class="manual-footer">
+            <p>作者: <a href="https://www.tsuyoshikashiwazaki.jp/profile/" target="_blank" rel="noopener">柏崎剛（Tsuyoshi Kashiwazaki）</a></p>
+            <p>プラグイン: Kashiwazaki SEO StayPop v1.0.0 | <a href="https://github.com/TsuyoshiKashiwazaki/wp-plugin-kashiwazaki-seo-staypop" target="_blank" rel="noopener">GitHub</a></p>
+        </footer>
+    </main>
+
+    <div class="lightbox"></div>
+    <script src="js/manual.js"></script>
+</body>
+</html>

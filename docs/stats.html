@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>集計タブ - Kashiwazaki SEO StayPop マニュアル</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <button class="hamburger-btn" aria-label="メニューを開く">&#9776;</button>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2 style="color:#fff;">SEO StayPop</h2>
+            <span class="version">v1.0.0</span>
+            <img src="images/main-visual.png" alt="" style="width:100%;border-radius:4px;margin-top:8px;">
+        </div>
+        <ul>
+            <li><a href="index.html">概要</a></li>
+            <li><a href="setup.html">インストール・初期設定</a></li>
+            <li><a href="banners.html">バナー一覧</a></li>
+            <li><a href="editor.html">編集画面の見方</a></li>
+            <li><a href="editor-content.html">内容タブ</a></li>
+            <li><a href="editor-design.html">デザインタブ</a></li>
+            <li><a href="editor-timing.html">表示のタイミングタブ</a></li>
+            <li><a href="editor-pages.html">表示するページタブ</a></li>
+            <li><a href="editor-schedule.html">回数・期間タブ</a></li>
+            <li><a href="editor-audience.html">出し分けタブ</a></li>
+            <li><a href="editor-measure.html">成果・A/Bテストタブ</a></li>
+            <li><a href="test-display.html">サイトでテスト表示</a></li>
+            <li><a href="formats.html">サイトでの表示</a></li>
+            <li><a href="stats.html" class="active">集計タブ</a></li>
+            <li><a href="settings.html">設定タブ</a></li>
+            <li><a href="glossary.html">用語集</a></li>
+            <li><a href="troubleshooting.html">トラブルシューティング</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <h1>集計タブ</h1>
+        <p class="lead">バナーごとの表示・クリック・閉じた・成果の回数と割合を、期間を選んで確かめる画面です。管理者だけが使えます。</p>
+
+        <figure class="screenshot">
+            <img src="images/screenshots/29-stats-banner.png" alt="集計タブのバナー別の表" class="lightbox-trigger">
+            <figcaption>集計タブ（バナー別）。編集画面の「このバナーの集計を見る」から開くと、そのバナーの行が色付きで強調されます</figcaption>
+        </figure>
+
+        <figure class="infographic">
+            <img src="images/infographics/stats-metrics.png" alt="表示・クリック・成果の関係とクリック率・成果率の計算">
+            <figcaption>表示 → クリック → 成果。クリック率と成果率は「表示」に対する割合です</figcaption>
+        </figure>
+
+        <h2>画面の地図</h2>
+        <table>
+            <thead>
+                <tr><th style="width:26%;">場所</th><th>内容</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>期間</td><td><strong>直近 7 日 / 直近 30 日（初期値） / 直近 90 日</strong> から選びます。選ぶとすぐに表示が切り替わります。</td></tr>
+                <tr><td>バナー別</td><td>バナーごとの結果です。ゴミ箱以外のすべてのバナーが、表示の多い順に並びます（表示されていないバナーも 0 で並びます）。名前をクリックすると編集画面が開きます。</td></tr>
+                <tr><td>A/Bテスト</td><td>A/B テストをしているバナーごとに、パターン A とパターン B の結果を並べます。A/B テストをしているバナーがないときは「A/Bテストをしているバナーはありません（バナーの編集画面の「成果・A/Bテスト」で始められます）。」と表示されます。</td></tr>
+                <tr><td>端末別</td><td>PC とスマホの結果です。判断できなかったものは「不明」になります。</td></tr>
+                <tr><td>ページ別（表示の多い順に20件）</td><td>どのページで表示・クリック・成果があったかを、表示の多い順に 20 件まで並べます。</td></tr>
+                <tr><td>ログの管理</td><td>ログを自動で削除する日数の案内と、<strong>「すべてのログを削除」</strong>ボタンです。</td></tr>
+            </tbody>
+        </table>
+
+        <h2>列の意味</h2>
+        <table>
+            <thead>
+                <tr><th style="width:18%;">列</th><th>意味</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>表示</td><td>バナーを表示した回数です。同じ人に2回表示すれば 2 と数えます。</td></tr>
+                <tr><td>クリック</td><td>バナーのボタンが押された回数です（サブリンクは数えません）。</td></tr>
+                <tr><td>クリック率</td><td>クリック ÷ 表示（%）。表示が 0 のときは「—」です。</td></tr>
+                <tr><td>閉じた</td><td>バナーが × ・Esc・暗い背景のクリックで閉じられた回数です。</td></tr>
+                <tr><td>成果</td><td>バナーを見た（またはクリックした）人が、成果ページに来た回数です（<a href="editor-measure.html">成果ページ</a>）。</td></tr>
+                <tr><td>成果率</td><td>成果 ÷ 表示（%）。表示が 0 のときは「—」です。</td></tr>
+            </tbody>
+        </table>
+
+        <p>列の名前の横の (i) にマウスを乗せると、計算のしかたが表示されます。</p>
+        <figure class="screenshot">
+            <img src="images/screenshots/30-stats-ab-device.png" alt="A/B テストと端末別の表" class="lightbox-trigger">
+            <figcaption>A/B テストと端末別</figcaption>
+        </figure>
+
+        <h2>結果の読み方</h2>
+        <ul>
+            <li><strong>A/B テスト</strong>は、クリック率と成果率でパターンを比べます。表示の回数が少ないうちの差は、偶然のことがあります。</li>
+            <li><strong>ページ別</strong>の成果は、成果が数えられたページ（成果ページ）の行に入ります。そのため、成果ページの行は「表示 0・成果 ○」のようになります。</li>
+            <li>完全に削除したバナー（またはゴミ箱のバナー）のログは、「削除したバナー #番号」として残ります。</li>
+            <li>ページのパスがわからない記録は「不明」と表示されます。</li>
+            <li>選んだ期間に記録が1件もない表には「この期間のデータはありません。」と表示されます。</li>
+        </ul>
+        <figure class="screenshot">
+            <img src="images/screenshots/31-stats-page-logs.png" alt="ページ別の表とログの管理" class="lightbox-trigger">
+            <figcaption>ページ別とログの管理</figcaption>
+        </figure>
+
+        <h2>記録されないもの</h2>
+        <ul>
+            <li><a href="settings.html">設定タブ</a>で計測をオフにしている間の表示・クリック・閉じた・成果</li>
+            <li>ブラウザで「トラッキング拒否」にしている人（設定でオンのとき）、同意していない人（「同意した人だけ記録する」のとき）</li>
+            <li>サイトでテスト表示、編集画面のプレビュー</li>
+        </ul>
+        <div class="callout callout-note">
+            <p>ログインしている管理者が自分でサイトを見て表示されたバナーも、ふつうの訪問者と同じように記録されます。自分の確認で数字を増やしたくないときは、<a href="test-display.html">サイトでテスト表示</a>を使ってください。</p>
+        </div>
+
+        <figure class="screenshot">
+            <img src="images/screenshots/32-stats-analytics-off.png" alt="計測をオフにしているときの警告" class="lightbox-trigger">
+            <figcaption>計測をオフにしているときは、集計タブの上に警告が表示されます</figcaption>
+        </figure>
+
+        <h2>ログの管理</h2>
+        <p>「○ 日を過ぎたログは毎日自動で削除します（日数は「設定」タブで変えられます）。」と、いまの日数が表示されます。</p>
+        <div class="step"><div class="step-number">1</div><div class="step-content"><p><strong>「すべてのログを削除」</strong>を押します。</p></div></div>
+        <div class="step"><div class="step-number">2</div><div class="step-content"><p>「すべてのログを削除します。集計は0に戻り、元に戻せません。よろしいですか？」と確認が表示されます。</p></div></div>
+        <div class="step"><div class="step-number">3</div><div class="step-content"><p>「OK」を押すと、すべてのバナーのログが削除され、「ログを ○ 件削除しました。」と表示されます。</p></div></div>
+
+        <div class="callout callout-warning">
+            <p>削除したログは<strong>元に戻せません</strong>。バナーごとに選んで消すことはできません。</p>
+        </div>
+
+
+        <nav class="page-nav">
+            <a href="formats.html" class="prev">&laquo; サイトでの表示</a>
+            <a href="settings.html" class="next">設定タブ &raquo;</a>
+        </nav>
+
+        <footer class="manual-footer">
+            <p>作者: <a href="https://www.tsuyoshikashiwazaki.jp/profile/" target="_blank" rel="noopener">柏崎剛（Tsuyoshi Kashiwazaki）</a></p>
+            <p>プラグイン: Kashiwazaki SEO StayPop v1.0.0 | <a href="https://github.com/TsuyoshiKashiwazaki/wp-plugin-kashiwazaki-seo-staypop" target="_blank" rel="noopener">GitHub</a></p>
+        </footer>
+    </main>
+
+    <div class="lightbox"></div>
+    <script src="js/manual.js"></script>
+</body>
+</html>

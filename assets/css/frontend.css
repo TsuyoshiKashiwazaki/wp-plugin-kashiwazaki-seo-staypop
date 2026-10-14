@@ -1,0 +1,306 @@
+/**
+ * Kashiwazaki SEO StayPop - フロントエンド
+ */
+
+.kashiwazaki-staypop-root {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    display: flex;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+    line-height: 1.6;
+}
+
+.kashiwazaki-staypop-root * {
+    box-sizing: border-box;
+}
+
+.kashiwazaki-staypop-backdrop {
+    position: absolute;
+    inset: 0;
+}
+
+.kashiwazaki-staypop-box {
+    position: relative;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+    margin: auto;
+    text-align: left;
+    overflow: auto;
+}
+
+/* 閉じるボタン: 画像の上でも見えるよう白地に影 */
+.kashiwazaki-staypop-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 2;
+    width: 34px;
+    height: 34px;
+    border: 0;
+    border-radius: 50%;
+    background: #fff;
+    color: #222;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    font-size: 22px;
+    line-height: 34px;
+    text-align: center;
+    cursor: pointer;
+    padding: 0;
+}
+
+.kashiwazaki-staypop-close:hover {
+    background: #f0f0f0;
+}
+
+.kashiwazaki-staypop-close:focus-visible {
+    outline: 3px solid #2271b1;
+    outline-offset: 2px;
+}
+
+.kashiwazaki-staypop-image {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+.kashiwazaki-staypop-body {
+    padding-top: 12px;
+}
+
+.kashiwazaki-staypop-root:not(.kashiwazaki-staypop-has-image) .kashiwazaki-staypop-body {
+    padding-top: 0;
+    padding-right: 36px; /* 閉じるボタンと見出しが重ならないように */
+}
+
+.kashiwazaki-staypop-heading {
+    font-size: 1.25em;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0 0 6px;
+}
+
+.kashiwazaki-staypop-desc {
+    margin: 0 0 14px;
+    white-space: pre-line;
+}
+
+.kashiwazaki-staypop-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 16px;
+}
+
+.kashiwazaki-staypop-button {
+    display: inline-block;
+    text-decoration: none;
+    padding: 11px 22px;
+    border-radius: 6px;
+    font-weight: 700;
+    background: #2271b1;
+    color: #fff;
+    line-height: 1.4;
+}
+
+.kashiwazaki-staypop-button:hover {
+    filter: brightness(1.06);
+}
+
+.kashiwazaki-staypop-button:focus-visible,
+.kashiwazaki-staypop-sub:focus-visible {
+    outline: 3px solid #2271b1;
+    outline-offset: 2px;
+}
+
+.kashiwazaki-staypop-sub {
+    text-decoration: underline;
+    color: inherit;
+    font-size: 0.92em;
+}
+
+/* 中央ポップアップ */
+.kashiwazaki-staypop-format-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.kashiwazaki-staypop-format-center .kashiwazaki-staypop-box {
+    width: calc(100% - 32px);
+    max-height: calc(100% - 40px);
+    animation: kashiwazaki-staypop-pop 0.22s ease-out;
+}
+
+.kashiwazaki-staypop-format-center .kashiwazaki-staypop-button {
+    display: block;
+    flex: 1 1 100%;
+    text-align: center;
+}
+
+/* 下部バナー: 横一列（画像は小さく左、文言、ボタン右） */
+.kashiwazaki-staypop-format-bottom_bar {
+    align-items: flex-end;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.kashiwazaki-staypop-format-bottom_bar .kashiwazaki-staypop-box {
+    pointer-events: auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-right: 56px !important;
+    box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.18);
+    animation: kashiwazaki-staypop-up 0.25s ease-out;
+}
+
+.kashiwazaki-staypop-format-bottom_bar .kashiwazaki-staypop-image {
+    width: auto;
+    max-width: 160px;
+    max-height: 90px;
+    flex: 0 0 auto;
+}
+
+.kashiwazaki-staypop-format-bottom_bar .kashiwazaki-staypop-body {
+    padding: 0;
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px 20px;
+}
+
+.kashiwazaki-staypop-format-bottom_bar .kashiwazaki-staypop-heading {
+    margin: 0;
+}
+
+.kashiwazaki-staypop-format-bottom_bar .kashiwazaki-staypop-desc {
+    margin: 0;
+    flex: 1 1 240px;
+}
+
+.kashiwazaki-staypop-format-bottom_bar .kashiwazaki-staypop-close {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* 隅からのスライド: 小さめのカード */
+.kashiwazaki-staypop-format-corner {
+    align-items: flex-end;
+    justify-content: flex-end;
+    pointer-events: none;
+}
+
+.kashiwazaki-staypop-format-corner .kashiwazaki-staypop-box {
+    pointer-events: auto;
+    width: calc(100% - 32px);
+    margin: 16px;
+    max-height: calc(100% - 32px);
+    animation: kashiwazaki-staypop-slide 0.25s ease-out;
+}
+
+.kashiwazaki-staypop-corner-bottom-left,
+.kashiwazaki-staypop-corner-top-left {
+    justify-content: flex-start;
+}
+
+.kashiwazaki-staypop-corner-top-right,
+.kashiwazaki-staypop-corner-top-left {
+    align-items: flex-start;
+}
+
+.kashiwazaki-staypop-corner-bottom-left .kashiwazaki-staypop-box,
+.kashiwazaki-staypop-corner-top-left .kashiwazaki-staypop-box {
+    animation-name: kashiwazaki-staypop-slide-left;
+}
+
+/* スマホ幅 */
+@media (max-width: 600px) {
+    .kashiwazaki-staypop-format-bottom_bar .kashiwazaki-staypop-box {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .kashiwazaki-staypop-format-bottom_bar .kashiwazaki-staypop-image {
+        max-width: 96px;
+        max-height: 64px;
+    }
+    .kashiwazaki-staypop-format-bottom_bar .kashiwazaki-staypop-close {
+        top: 8px;
+        transform: none;
+    }
+}
+
+@keyframes kashiwazaki-staypop-pop {
+    from { opacity: 0; transform: scale(0.96); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes kashiwazaki-staypop-up {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes kashiwazaki-staypop-slide {
+    from { opacity: 0; transform: translateX(24px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes kashiwazaki-staypop-slide-left {
+    from { opacity: 0; transform: translateX(-24px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .kashiwazaki-staypop-box { animation: none !important; }
+}
+
+/* テスト表示（管理者だけに出る） */
+.kashiwazaki-staypop-testbar {
+    position: fixed;
+    left: 16px;
+    bottom: 16px;
+    z-index: 1000000;
+    width: 320px;
+    max-width: calc(100% - 32px);
+    background: #1d2327;
+    color: #f0f0f1;
+    border-radius: 8px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+    font: 13px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+    padding: 12px 14px;
+}
+
+.kashiwazaki-staypop-testbar-title {
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #fff;
+}
+
+.kashiwazaki-staypop-testbar-list {
+    list-style: none;
+    margin: 0 0 8px;
+    padding: 0;
+}
+
+.kashiwazaki-staypop-testbar-list li {
+    margin: 0;
+    padding: 1px 0;
+    color: #c3c4c7;
+}
+
+.kashiwazaki-staypop-testbar-list li.is-done {
+    color: #7ad03a;
+}
+
+.kashiwazaki-staypop-testbar-btn {
+    background: #f0f0f1;
+    color: #1d2327;
+    border: 0;
+    border-radius: 4px;
+    padding: 4px 10px;
+    font-size: 12px;
+    cursor: pointer;
+}

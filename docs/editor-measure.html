@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成果・A/Bテストタブ - Kashiwazaki SEO StayPop マニュアル</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <button class="hamburger-btn" aria-label="メニューを開く">&#9776;</button>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2 style="color:#fff;">SEO StayPop</h2>
+            <span class="version">v1.0.0</span>
+            <img src="images/main-visual.png" alt="" style="width:100%;border-radius:4px;margin-top:8px;">
+        </div>
+        <ul>
+            <li><a href="index.html">概要</a></li>
+            <li><a href="setup.html">インストール・初期設定</a></li>
+            <li><a href="banners.html">バナー一覧</a></li>
+            <li><a href="editor.html">編集画面の見方</a></li>
+            <li><a href="editor-content.html">内容タブ</a></li>
+            <li><a href="editor-design.html">デザインタブ</a></li>
+            <li><a href="editor-timing.html">表示のタイミングタブ</a></li>
+            <li><a href="editor-pages.html">表示するページタブ</a></li>
+            <li><a href="editor-schedule.html">回数・期間タブ</a></li>
+            <li><a href="editor-audience.html">出し分けタブ</a></li>
+            <li><a href="editor-measure.html" class="active">成果・A/Bテストタブ</a></li>
+            <li><a href="test-display.html">サイトでテスト表示</a></li>
+            <li><a href="formats.html">サイトでの表示</a></li>
+            <li><a href="stats.html">集計タブ</a></li>
+            <li><a href="settings.html">設定タブ</a></li>
+            <li><a href="glossary.html">用語集</a></li>
+            <li><a href="troubleshooting.html">トラブルシューティング</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <h1>成果・A/Bテストタブ</h1>
+        <p class="lead">バナーの「成果」を数えるページの指定と、2つのパターンを比べる A/B テストの設定を行うタブです。</p>
+
+        <figure class="screenshot">
+            <img src="images/screenshots/21-tab-measure.png" alt="成果・A/Bテストタブ" class="lightbox-trigger">
+            <figcaption>成果・A/Bテストタブ（成果ページを指定し、A/B テストをオンにした例）</figcaption>
+        </figure>
+
+        <figure class="infographic">
+            <img src="images/infographics/conversion-ab.png" alt="成果の数え方と A/B テストの仕組み">
+            <figcaption>見た人・クリックした人が成果ページに来たら「成果」。A/B テストは訪問者を2つに分けて比べます</figcaption>
+        </figure>
+
+        <h2>項目の一覧</h2>
+        <table>
+            <thead>
+                <tr><th style="width:45%;">項目</th><th style="width:27%;">種類</th><th>初期値</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>成果ページ</td><td>複数行（1行に1つ）</td><td>空</td></tr>
+                <tr><td>成果に至った人には、このバナーを表示しない</td><td>チェックボックス</td><td>オフ</td></tr>
+                <tr><td>A/Bテストをする</td><td>チェックボックス</td><td>オフ</td></tr>
+                <tr><td>A を ○ % の人に、B を残りの人に見せます</td><td>数字（%、5 きざみ）</td><td>50 %</td></tr>
+                <tr><td>パターン A / パターン B：見出し・ボタンの文言・画像</td><td>1行の文字・画像</td><td>空（「内容」の設定を使う）</td></tr>
+                <tr><td>集計：このバナーの集計を見る</td><td>リンク</td><td>保存したあとに表示</td></tr>
+            </tbody>
+        </table>
+
+        <h2>成果ページ</h2>
+        <p><strong>何をするものか:</strong> 購入完了・問い合わせ完了など、バナーの目的を果たしたときに開くページを指定します。このバナーを<strong>見た（またはクリックした）人</strong>が、あとでこのページに来たら「成果」として1回数えます。</p>
+        <ul>
+            <li>書き方は「表示するページ」の URL・パスと同じです（1行に1つ、<code>/thanks/</code> など）。</li>
+            <li>成果は、同じブラウザの人について<strong>バナーごとに1回だけ</strong>数えます。</li>
+            <li>数えるのは、<a href="settings.html">設定タブ</a>で計測がオンのとき（記録してよい訪問者のとき）だけです。</li>
+            <li>成果ページを「表示しないページ」に入れていても数えます。</li>
+            <li>成果を数えるのは、バナーが<strong>公開中で「サイトに表示する」がオン</strong>のときです。停止中のバナーの成果は数えません。</li>
+        </ul>
+        <h2>成果に至った人には、このバナーを表示しない</h2>
+        <p>チェックを入れると、成果ページに来た人には、その後このバナーを表示しません。すでに申し込んだ人に、同じ案内を出し続けないための設定です。この設定は、計測をオフにしていても働きます（訪問者のブラウザに記録します）。</p>
+        <h2>A/Bテスト</h2>
+        <p><strong>何をするものか:</strong> 見出し・ボタンの文言・画像が違う2つのパターン（A と B）を、決めた割合で訪問者に出し分け、どちらがよくクリックされるか・成果につながるかを比べます。</p>
+        <div class="step"><div class="step-number">1</div><div class="step-content"><p><strong>「A/Bテストをする」</strong>にチェックを入れます。下に設定の欄が開きます。</p></div></div>
+        <div class="step"><div class="step-number">2</div><div class="step-content"><p><strong>「A を ○ % の人に」</strong>の数字を決めます。B は残りの人に見せます（初期値はどちらも 50 %）。</p></div></div>
+        <div class="step"><div class="step-number">3</div><div class="step-content"><p>パターン A とパターン B の<strong>見出し・ボタンの文言・画像</strong>を入れます。欄の下に「空の欄は「内容」の設定を使います。結果（表示・クリック率・成果率）は「集計」タブで比べられます。」と表示されているとおり、空の欄は「内容」タブの設定を使います。</p></div></div>
+        <div class="step"><div class="step-number">4</div><div class="step-content"><p>プレビューの<strong>「A / B」</strong>で、それぞれの見た目を確かめてから保存します。</p></div></div>
+        <div class="step"><div class="step-number">5</div><div class="step-content"><p>しばらく表示したあと、<a href="stats.html">集計タブ</a>の「A/Bテスト」で、パターンごとの表示・クリック率・成果率を比べます。</p></div></div>
+
+        <ul>
+            <li>1人の訪問者には、最初に割り当てたパターンをずっと表示します（同じブラウザの場合）。</li>
+            <li>パターンの画像を入れた場合は、PC でもスマホでもその画像を使います（スマホ用の画像より優先します）。</li>
+            <li>説明文・ボタンのリンク先・デザインは、A と B で共通です。</li>
+        </ul>
+        <div class="callout callout-tip">
+            <p><strong>おすすめ:</strong> 一度に変えるのは1か所（見出しだけ、など）にすると、どの違いが結果に効いたのかが分かりやすくなります。表示の回数が少ないうちは差が偶然のこともあるので、ある程度の回数が集まってから比べてください。</p>
+        </div>
+
+        <h2>集計</h2>
+        <p>保存したあとに<strong>「このバナーの集計を見る」</strong>のリンクが表示されます。押すと集計タブが開き、このバナーの行が色付きで強調されます。</p>
+
+        <nav class="page-nav">
+            <a href="editor-audience.html" class="prev">&laquo; 出し分けタブ</a>
+            <a href="test-display.html" class="next">サイトでテスト表示 &raquo;</a>
+        </nav>
+
+        <footer class="manual-footer">
+            <p>作者: <a href="https://www.tsuyoshikashiwazaki.jp/profile/" target="_blank" rel="noopener">柏崎剛（Tsuyoshi Kashiwazaki）</a></p>
+            <p>プラグイン: Kashiwazaki SEO StayPop v1.0.0 | <a href="https://github.com/TsuyoshiKashiwazaki/wp-plugin-kashiwazaki-seo-staypop" target="_blank" rel="noopener">GitHub</a></p>
+        </footer>
+    </main>
+
+    <div class="lightbox"></div>
+    <script src="js/manual.js"></script>
+</body>
+</html>

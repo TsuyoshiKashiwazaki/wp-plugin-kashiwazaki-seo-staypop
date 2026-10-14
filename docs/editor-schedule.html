@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>回数・期間タブ - Kashiwazaki SEO StayPop マニュアル</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <button class="hamburger-btn" aria-label="メニューを開く">&#9776;</button>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2 style="color:#fff;">SEO StayPop</h2>
+            <span class="version">v1.0.0</span>
+            <img src="images/main-visual.png" alt="" style="width:100%;border-radius:4px;margin-top:8px;">
+        </div>
+        <ul>
+            <li><a href="index.html">概要</a></li>
+            <li><a href="setup.html">インストール・初期設定</a></li>
+            <li><a href="banners.html">バナー一覧</a></li>
+            <li><a href="editor.html">編集画面の見方</a></li>
+            <li><a href="editor-content.html">内容タブ</a></li>
+            <li><a href="editor-design.html">デザインタブ</a></li>
+            <li><a href="editor-timing.html">表示のタイミングタブ</a></li>
+            <li><a href="editor-pages.html">表示するページタブ</a></li>
+            <li><a href="editor-schedule.html" class="active">回数・期間タブ</a></li>
+            <li><a href="editor-audience.html">出し分けタブ</a></li>
+            <li><a href="editor-measure.html">成果・A/Bテストタブ</a></li>
+            <li><a href="test-display.html">サイトでテスト表示</a></li>
+            <li><a href="formats.html">サイトでの表示</a></li>
+            <li><a href="stats.html">集計タブ</a></li>
+            <li><a href="settings.html">設定タブ</a></li>
+            <li><a href="glossary.html">用語集</a></li>
+            <li><a href="troubleshooting.html">トラブルシューティング</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <h1>回数・期間タブ</h1>
+        <p class="lead">同じ人に何回表示するか、閉じた人にいつまで表示しないか、いつからいつまで表示するか、ほかのバナーとどちらを優先するかを決めるタブです。</p>
+
+        <figure class="screenshot">
+            <img src="images/screenshots/19-tab-schedule.png" alt="回数・期間タブ" class="lightbox-trigger">
+            <figcaption>回数・期間タブ（掲載期間を決めた例）</figcaption>
+        </figure>
+
+        <figure class="infographic">
+            <img src="images/infographics/frequency-schedule.png" alt="表示する回数の4つの選択肢と、閉じたあとの日数・掲載期間・優先度">
+            <figcaption>回数の決まり・閉じたあとの日数・掲載期間・優先度</figcaption>
+        </figure>
+
+        <h2>項目の一覧</h2>
+        <table>
+            <thead>
+                <tr><th style="width:30%;">項目</th><th style="width:18%;">種類</th><th style="width:25%;">初期値</th><th>入力できる範囲</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>表示する回数</td><td>プルダウン</td><td>1回の訪問につき1回まで</td><td>4つの選択肢</td></tr>
+                <tr><td>閉じたあと ○ 日は表示しない</td><td>数字（日）</td><td>7 日</td><td>0〜365 日</td></tr>
+                <tr><td>掲載期間</td><td>日時 〜 日時</td><td>空（期限なし）</td><td>-</td></tr>
+                <tr><td>優先度</td><td>数字</td><td>10</td><td>0〜100</td></tr>
+            </tbody>
+        </table>
+
+        <h2>表示する回数</h2>
+        <table>
+            <thead>
+                <tr><th style="width:32%;">選択肢</th><th>表示する回数</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>1回の訪問につき1回まで（初期値）</td><td>1回の訪問の間に1回だけ表示します。ページを見なくなってから 30 分たつと、次の訪問として数えます。同じブラウザなら、別のタブで開いても同じ訪問です。</td></tr>
+                <tr><td>1日1回まで</td><td>1日に1回だけ表示します。日付が変わると、また表示できます。</td></tr>
+                <tr><td>最初の1回だけ（以後は表示しない）</td><td>一度表示したら、その後は表示しません。</td></tr>
+                <tr><td>ページを開くたびに</td><td>ページを開くたびに、表示のきっかけが起きれば表示します（1つのページで表示するのは1回です）。</td></tr>
+            </tbody>
+        </table>
+
+        <div class="callout callout-note">
+            <p>回数は、<strong>訪問者のブラウザごと</strong>に数えます。別のブラウザや別の端末で見たとき、ブラウザの閲覧データを消したときは、はじめから数え直します。</p>
+        </div>
+
+        <h2>閉じたあと ○ 日は表示しない</h2>
+        <p>訪問者がバナーを閉じたら（× ・Esc キー・暗い背景のクリック）、指定した日数の間はそのバナーを表示しません。<strong>0</strong> にすると、閉じても上の「表示する回数」の決まりどおりに再び表示します。</p>
+        <ul>
+            <li>ボタンを押してリンク先へ移動したときは、「閉じた」には数えません。</li>
+        </ul>
+        <h2>掲載期間</h2>
+        <p>バナーを表示する期間の、始まりと終わりの日時を決めます。</p>
+        <ul>
+            <li>空欄なら期限なしです。始まりだけ、終わりだけでも決められます。</li>
+            <li>時刻は、WordPress の設定にある<strong>サイトのタイムゾーン</strong>で判断します（欄の下に表示されます）。</li>
+            <li>始まりの前は一覧で「表示予定（月/日 時:分 から）」、終わったあとは「掲載終了」と表示されます。</li>
+            <li>日時の欄の表示の形（年月日の並び）は、お使いのブラウザによって違います。</li>
+        </ul>
+        <h2>優先度</h2>
+        <p>ほかのバナーと同時に表示のきっかけが起きたときに、どちらを表示するかを決める数字です。<strong>数字が大きいほうを1つだけ</strong>表示します。同じ数字なら、先に作ったバナーを表示します。</p>
+        <div class="callout callout-tip">
+            <p><strong>おすすめ:</strong> 期間限定のキャンペーンなど、一時的に優先したいバナーは優先度を大きく（例: 50）し、いつも出しておくバナーは初期値（10）のままにしておくと、期間中だけキャンペーンが優先されます。</p>
+        </div>
+
+
+        <nav class="page-nav">
+            <a href="editor-pages.html" class="prev">&laquo; 表示するページタブ</a>
+            <a href="editor-audience.html" class="next">出し分けタブ &raquo;</a>
+        </nav>
+
+        <footer class="manual-footer">
+            <p>作者: <a href="https://www.tsuyoshikashiwazaki.jp/profile/" target="_blank" rel="noopener">柏崎剛（Tsuyoshi Kashiwazaki）</a></p>
+            <p>プラグイン: Kashiwazaki SEO StayPop v1.0.0 | <a href="https://github.com/TsuyoshiKashiwazaki/wp-plugin-kashiwazaki-seo-staypop" target="_blank" rel="noopener">GitHub</a></p>
+        </footer>
+    </main>
+
+    <div class="lightbox"></div>
+    <script src="js/manual.js"></script>
+</body>
+</html>

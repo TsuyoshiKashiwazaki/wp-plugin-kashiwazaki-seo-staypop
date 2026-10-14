@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>バナー一覧 - Kashiwazaki SEO StayPop マニュアル</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <button class="hamburger-btn" aria-label="メニューを開く">&#9776;</button>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2 style="color:#fff;">SEO StayPop</h2>
+            <span class="version">v1.0.0</span>
+            <img src="images/main-visual.png" alt="" style="width:100%;border-radius:4px;margin-top:8px;">
+        </div>
+        <ul>
+            <li><a href="index.html">概要</a></li>
+            <li><a href="setup.html">インストール・初期設定</a></li>
+            <li><a href="banners.html" class="active">バナー一覧</a></li>
+            <li><a href="editor.html">編集画面の見方</a></li>
+            <li><a href="editor-content.html">内容タブ</a></li>
+            <li><a href="editor-design.html">デザインタブ</a></li>
+            <li><a href="editor-timing.html">表示のタイミングタブ</a></li>
+            <li><a href="editor-pages.html">表示するページタブ</a></li>
+            <li><a href="editor-schedule.html">回数・期間タブ</a></li>
+            <li><a href="editor-audience.html">出し分けタブ</a></li>
+            <li><a href="editor-measure.html">成果・A/Bテストタブ</a></li>
+            <li><a href="test-display.html">サイトでテスト表示</a></li>
+            <li><a href="formats.html">サイトでの表示</a></li>
+            <li><a href="stats.html">集計タブ</a></li>
+            <li><a href="settings.html">設定タブ</a></li>
+            <li><a href="glossary.html">用語集</a></li>
+            <li><a href="troubleshooting.html">トラブルシューティング</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <h1>バナー一覧</h1>
+        <p class="lead">作ったバナーを一覧で確かめ、表示の開始と停止・複製・テスト表示・ゴミ箱への移動を行う画面です。</p>
+
+        <p>左メニューの「Kashiwazaki SEO StayPop」を開くと、最初にこの画面が表示されます。各バナーの状態・表示のタイミング・表示形式・直近30日の結果を、1行ずつ確かめられます。</p>
+        <figure class="screenshot">
+            <img src="images/screenshots/02-banner-list.png" alt="バナー一覧の画面" class="lightbox-trigger">
+            <figcaption>バナー一覧（例のバナーを並べた状態）</figcaption>
+        </figure>
+
+        <h2>画面の地図</h2>
+        <table>
+            <thead>
+                <tr><th style="width:18%;">場所</th><th style="width:30%;">表示・操作</th><th>内容</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>見出しの横</td><td><strong>バナーを追加</strong></td><td>新しいバナーの編集画面を開きます。「バナー一覧」タブのときだけ表示されます。</td></tr>
+                <tr><td>見出しの下</td><td><strong>バナー一覧 / 集計 / 設定</strong></td><td>タブで画面を切り替えます。集計と設定は管理者だけに表示されます。</td></tr>
+                <tr><td>表の上</td><td><strong>すべて (件数) / ゴミ箱 (件数)</strong></td><td>ふだんのバナーと、ゴミ箱のバナーの表示を切り替えます。「ゴミ箱」はゴミ箱に1件以上あるときだけ表示されます。</td></tr>
+                <tr><td>表</td><td>画像・バナー・状態・表示のタイミング・表示形式・直近30日</td><td>1行が1つのバナーです。新しく作ったものほど上に並びます。</td></tr>
+            </tbody>
+        </table>
+
+        <h2>表の列</h2>
+        <table>
+            <thead>
+                <tr><th style="width:22%;">列</th><th>内容</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>（画像）</td><td>バナーに画像を設定していれば、その画像の縮小版が表示されます。画像がなければ、表示形式を表す小さな絵が表示されます。</td></tr>
+                <tr><td>バナー</td><td>バナーの名前です。名前を付けていない場合は「（名前なし）」と表示されます。名前をクリックすると編集画面が開きます。下に行の操作（編集・複製・テスト表示・ゴミ箱へ）が並びます。</td></tr>
+                <tr><td>状態</td><td>いまサイトに表示されるかどうかを表す札と、表示・停止を切り替えるボタンです（下の表を参照）。</td></tr>
+                <tr><td>表示のタイミング</td><td>PC とスマホのそれぞれで、どんなときに表示されるかを文章で表示します。その端末で使える条件がないときは「表示されません」と表示されます。</td></tr>
+                <tr><td>表示形式</td><td>中央ポップアップ・下部バナー・隅からのスライド表示のどれかです。</td></tr>
+                <tr><td>直近30日</td><td>管理者だけに表示されます。「表示 ○ ・ クリック率 ○% ・ 成果 ○」の形で、直近30日の結果を表示します。まだ一度も表示されていなければ「まだ表示されていません」と表示されます。</td></tr>
+            </tbody>
+        </table>
+
+        <h2>状態の札とボタン</h2>
+        <figure class="infographic">
+            <img src="images/infographics/banner-list.png" alt="バナーの状態（下書き・公開予約・表示予定・表示中・掲載終了・停止中）の関係">
+            <figcaption>状態は、公開しているか・掲載期間の中か・「サイトに表示する」がオンかで決まります</figcaption>
+        </figure>
+
+        <table>
+            <thead>
+                <tr><th style="width:26%;">札</th><th>意味</th><th style="width:16%;">横のボタン</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><span class="status-ok">表示中</span></td><td>公開中で、いま表示されます。掲載期間の終わりを決めていれば「表示中（月/日 時:分 まで）」と表示されます。</td><td>停止する</td></tr>
+                <tr><td><span class="status-warning">表示予定（月/日 時:分 から）</span></td><td>公開中ですが、掲載期間がまだ始まっていません。始まると自動で表示されます。</td><td>停止する</td></tr>
+                <tr><td>掲載終了</td><td>公開中ですが、掲載期間が終わっています。表示されません。</td><td>停止する</td></tr>
+                <tr><td>停止中</td><td>公開中ですが、「サイトに表示する」がオフです。表示されません。</td><td>表示する</td></tr>
+                <tr><td>下書き</td><td>まだ公開していません。表示されません。</td><td>編集して公開</td></tr>
+                <tr><td>公開予約</td><td>公開する日時を予約しています。その日時になると公開されます。</td><td>編集して公開</td></tr>
+            </tbody>
+        </table>
+
+        <figure class="screenshot">
+            <img src="images/screenshots/03-list-status-timing.png" alt="状態と表示のタイミングの列" class="lightbox-trigger">
+            <figcaption>状態・表示のタイミング・表示形式の列の拡大</figcaption>
+        </figure>
+
+        <table>
+            <thead>
+                <tr><th style="width:25%;">ボタン</th><th>押すと</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>停止する</strong></td><td>そのバナーの「サイトに表示する」をオフにします。すぐに表示されなくなります。</td></tr>
+                <tr><td><strong>表示する</strong></td><td>そのバナーの「サイトに表示する」をオンにします。掲載期間の中なら、すぐに表示が始まります。</td></tr>
+                <tr><td><strong>編集して公開</strong></td><td>編集画面を開きます。公開は編集画面の「公開」ボタンで行います。</td></tr>
+            </tbody>
+        </table>
+
+        <figure class="screenshot">
+            <img src="images/screenshots/05-list-toggle-notice.png" alt="停止したときの通知" class="lightbox-trigger">
+            <figcaption>「停止する」を押したあと。画面の上に結果の通知が表示されます</figcaption>
+        </figure>
+
+        <h2>行の操作</h2>
+        <p>バナーの名前の下に、次の操作が並びます。</p>
+        <table>
+            <thead>
+                <tr><th style="width:18%;">操作</th><th>内容</th><th style="width:25%;">取り消し</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>編集</strong></td><td>編集画面を開きます。</td><td>-</td></tr>
+                <tr><td><strong>複製</strong></td><td>同じ設定のバナーを「（元の名前） のコピー」という名前で作り、その編集画面を開きます。複製したバナーは<strong>下書き・停止中</strong>で作られるので、同じバナーが2つ表示されることはありません。</td><td>不要になったらゴミ箱へ移せます</td></tr>
+                <tr><td><strong>テスト表示</strong></td><td>新しいタブでサイトのトップページを開き、このバナーを試します（<a href="test-display.html">サイトでテスト表示</a>）。</td><td>-</td></tr>
+                <tr><td><strong>ゴミ箱へ</strong></td><td>バナーをゴミ箱に移します。確認は出ません。ゴミ箱に移したバナーは表示されなくなります。</td><td>ゴミ箱から「元に戻す」で戻せます</td></tr>
+            </tbody>
+        </table>
+
+        <figure class="screenshot">
+            <img src="images/screenshots/06-list-trashed-notice.png" alt="ゴミ箱に移したときの通知" class="lightbox-trigger">
+            <figcaption>「ゴミ箱へ」を押したあと。表の上に「ゴミ箱 (件数)」が表示されます</figcaption>
+        </figure>
+
+        <h2>ゴミ箱</h2>
+        <p>表の上の<strong>「ゴミ箱」</strong>をクリックすると、ゴミ箱のバナーだけが表示されます。ゴミ箱では、列は画像とバナーの名前だけになります。</p>
+        <figure class="screenshot">
+            <img src="images/screenshots/04-list-trash.png" alt="ゴミ箱の表示" class="lightbox-trigger">
+            <figcaption>ゴミ箱の表示</figcaption>
+        </figure>
+
+        <table>
+            <thead>
+                <tr><th style="width:22%;">操作</th><th>内容</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>元に戻す</strong></td><td>ゴミ箱に移す前の状態（公開・下書きなど）に戻します。公開していたバナーは、戻したときに条件を満たしていれば、すぐに表示が始まります。</td></tr>
+                <tr><td><strong>完全に削除</strong></td><td>確認のメッセージ「このバナーを完全に削除します。元に戻せません。よろしいですか？」が表示され、「OK」を押すと削除します。<strong>元に戻せません。</strong></td></tr>
+            </tbody>
+        </table>
+
+        <div class="callout callout-warning">
+            <p>バナーを完全に削除しても、そのバナーの集計のログは消えません。集計タブでは「削除したバナー #番号」として残ります。ログも消したい場合は、<a href="stats.html">集計タブ</a>の「すべてのログを削除」を使います（すべてのバナーのログが消えます）。</p>
+        </div>
+
+        <h2>この画面で出るメッセージ</h2>
+        <table>
+            <thead>
+                <tr><th style="width:45%;">メッセージ</th><th>意味</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>「（名前）」を表示する設定にしました。</td><td>「表示する」を押して、表示をオンにしました。</td></tr>
+                <tr><td>「（名前）」を停止しました。</td><td>「停止する」を押して、表示をオフにしました。</td></tr>
+                <tr><td>バナーをゴミ箱に移動しました。「ゴミ箱」から元に戻せます。</td><td>「ゴミ箱へ」を押しました。</td></tr>
+                <tr><td>バナーをゴミ箱から戻しました。</td><td>ゴミ箱で「元に戻す」を押しました。</td></tr>
+                <tr><td>バナーを完全に削除しました。</td><td>ゴミ箱で「完全に削除」を押しました。</td></tr>
+                <tr><td>バナーを ○ 件読み込みました（停止中）。内容を確かめてから「表示する」にしてください。</td><td>設定タブの「読み込む」でバナーを読み込みました（<a href="settings.html">設定タブ</a>）。</td></tr>
+                <tr><td>まだバナーがありません。</td><td>バナーが1つもありません。横の「最初のバナーを作る」で作り始められます。</td></tr>
+                <tr><td>ゴミ箱は空です。</td><td>ゴミ箱にバナーがありません。</td></tr>
+            </tbody>
+        </table>
+
+
+        <nav class="page-nav">
+            <a href="setup.html" class="prev">&laquo; インストール・初期設定</a>
+            <a href="editor.html" class="next">編集画面の見方 &raquo;</a>
+        </nav>
+
+        <footer class="manual-footer">
+            <p>作者: <a href="https://www.tsuyoshikashiwazaki.jp/profile/" target="_blank" rel="noopener">柏崎剛（Tsuyoshi Kashiwazaki）</a></p>
+            <p>プラグイン: Kashiwazaki SEO StayPop v1.0.0 | <a href="https://github.com/TsuyoshiKashiwazaki/wp-plugin-kashiwazaki-seo-staypop" target="_blank" rel="noopener">GitHub</a></p>
+        </footer>
+    </main>
+
+    <div class="lightbox"></div>
+    <script src="js/manual.js"></script>
+</body>
+</html>

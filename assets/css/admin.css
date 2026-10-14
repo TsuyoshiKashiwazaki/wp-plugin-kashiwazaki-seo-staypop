@@ -1,0 +1,990 @@
+/**
+ * Kashiwazaki SEO StayPop - 管理画面
+ */
+
+/* ---------- 共通 ---------- */
+
+.ksp-muted,
+.ksp-summary [data-summary].is-none,
+.ksp-col-timing [data-summary].is-none {
+    color: #8c8f94;
+}
+
+.ksp-danger,
+.ksp-danger:hover {
+    color: #b32d2e;
+}
+
+.button.ksp-button-danger {
+    color: #b32d2e;
+    border-color: #b32d2e;
+}
+
+.button.ksp-button-danger:hover {
+    background: #b32d2e;
+    color: #fff;
+}
+
+/* (i) の説明: 全項目で同じ形。マウスを乗せるかフォーカスで出る */
+.ksp-tip {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    margin-left: 4px;
+    border-radius: 50%;
+    border: 1px solid #8c8f94;
+    color: #50575e;
+    font: italic 700 11px/1 Georgia, "Times New Roman", serif;
+    vertical-align: middle;
+    cursor: help;
+    user-select: none;
+}
+
+.ksp-tip:hover,
+.ksp-tip:focus {
+    border-color: #2271b1;
+    color: #2271b1;
+    outline: none;
+}
+
+.ksp-tip::after {
+    content: attr(data-tip);
+    position: absolute;
+    left: -8px;
+    top: calc(100% + 8px);
+    z-index: 100000;
+    width: max-content;
+    max-width: 280px;
+    padding: 8px 10px;
+    border-radius: 4px;
+    background: #1d2327;
+    color: #f0f0f1;
+    font: 400 12px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+    text-align: left;
+    white-space: normal;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.12s;
+}
+
+.ksp-tip:hover::after,
+.ksp-tip:focus::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 表の右寄せ列では、説明を左に開く */
+th.num .ksp-tip::after {
+    left: auto;
+    right: -8px;
+}
+
+/* ---------- 一覧・集計・設定（タブの画面） ---------- */
+
+.ksp-wrap .nav-tab-wrapper {
+    margin-bottom: 0;
+}
+
+.ksp-tab-body {
+    padding-top: 12px;
+}
+
+.ksp-wrap .subsubsub {
+    margin: 0 0 8px;
+}
+
+.ksp-list {
+    clear: both;
+}
+
+.ksp-list td,
+.ksp-list th {
+    vertical-align: middle;
+}
+
+.ksp-list .ksp-col-thumb {
+    width: 72px;
+}
+
+.ksp-list .ksp-col-thumb img {
+    display: block;
+    width: 64px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 3px;
+    border: 1px solid #dcdcde;
+}
+
+.ksp-list .ksp-col-status {
+    width: 190px;
+}
+
+.ksp-list .ksp-col-format {
+    width: 140px;
+}
+
+.ksp-list .ksp-col-stats {
+    width: 230px;
+}
+
+.ksp-list .ksp-col-timing div + div {
+    margin-top: 2px;
+}
+
+.ksp-list .ksp-empty {
+    padding: 28px 12px;
+    text-align: center;
+}
+
+.ksp-list .ksp-empty .button {
+    margin-left: 8px;
+}
+
+.ksp-actions {
+    margin-top: 4px;
+    color: #a7aaad;
+    font-size: 13px;
+}
+
+.ksp-actions a {
+    text-decoration: none;
+}
+
+.ksp-badge {
+    display: inline-block;
+    margin: 0 6px 4px 0;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 12px;
+    line-height: 1.6;
+    background: #f0f0f1;
+    color: #50575e;
+}
+
+.ksp-badge-on {
+    background: #edfaef;
+    color: #00701a;
+}
+
+.ksp-badge-scheduled {
+    background: #fcf9e8;
+    color: #7a5c00;
+}
+
+.ksp-badge-off,
+.ksp-badge-ended {
+    background: #f0f0f1;
+    color: #646970;
+}
+
+.ksp-badge-draft {
+    background: #f6f7f7;
+    color: #646970;
+    border: 1px dashed #c3c4c7;
+}
+
+.ksp-summary-label {
+    display: inline-block;
+    min-width: 3.2em;
+    margin-right: 4px;
+    padding: 0 6px;
+    border-radius: 3px;
+    background: #f0f0f1;
+    color: #50575e;
+    font-size: 11px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* 一覧の、画像が無いバナーの代わりの図 */
+.ksp-thumb-none {
+    display: block;
+    width: 64px;
+    height: 40px;
+}
+
+.ksp-period {
+    margin: 4px 0 8px;
+}
+
+.ksp-period label {
+    margin-right: 6px;
+    font-weight: 600;
+}
+
+.ksp-stats {
+    max-width: 980px;
+    margin-bottom: 8px;
+}
+
+.ksp-stats .num {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.ksp-stats tr.ksp-focus td {
+    background: #fcf9e8;
+}
+
+.ksp-danger-zone {
+    margin-top: 32px;
+    padding-top: 8px;
+    border-top: 1px solid #dcdcde;
+}
+
+/* WordPress 標準の「.form-table td fieldset label」（横並び）より強く指定して、1行に1つ並べる */
+.ksp-radios label,
+.form-table td fieldset.ksp-radios label {
+    display: block;
+    margin: 0 0 6px;
+}
+
+/* ---------- 編集画面 ---------- */
+
+.ksp-editor {
+    container-type: inline-size;
+    margin: 16px 0 20px;
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+.ksp-topbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px 24px;
+    padding: 14px 18px;
+    border-bottom: 1px solid #dcdcde;
+    background: #f6f7f7;
+    border-radius: 4px 4px 0 0;
+}
+
+.ksp-switch-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 14px;
+}
+
+.ksp-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.ksp-switch input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+.ksp-switch-ui {
+    position: relative;
+    width: 40px;
+    height: 22px;
+    border-radius: 11px;
+    background: #a7aaad;
+    transition: background 0.15s;
+    flex: 0 0 auto;
+}
+
+.ksp-switch-ui::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    transition: transform 0.15s;
+}
+
+.ksp-switch input:checked + .ksp-switch-ui {
+    background: #2271b1;
+}
+
+.ksp-switch input:checked + .ksp-switch-ui::after {
+    transform: translateX(18px);
+}
+
+.ksp-switch input:focus-visible + .ksp-switch-ui {
+    outline: 2px solid #2271b1;
+    outline-offset: 2px;
+}
+
+.ksp-status {
+    color: #50575e;
+}
+
+.ksp-summary {
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.ksp-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+}
+
+/* 横に余裕があるときは、右にプレビューを並べる */
+@container (min-width: 900px) {
+    .ksp-layout {
+        grid-template-columns: minmax(0, 1fr) 400px;
+    }
+    .ksp-preview {
+        border-top: 0 !important;
+        border-left: 1px solid #dcdcde;
+    }
+    .ksp-preview {
+        position: sticky;
+        top: 32px;
+        align-self: start;
+    }
+}
+
+.ksp-main {
+    min-width: 0;
+    padding: 0 18px 12px;
+    /* 設定欄の幅で見出しの置き方を変える（下の @container ksp-main） */
+    container-type: inline-size;
+    container-name: ksp-main;
+}
+
+.ksp-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 4px;
+    margin: 0 -18px 4px;
+    padding: 0 12px;
+    border-bottom: 1px solid #dcdcde;
+}
+
+.ksp-tab {
+    margin: 0 0 -1px;
+    padding: 12px 12px 10px;
+    border: 0;
+    border-bottom: 3px solid transparent;
+    background: none;
+    color: #50575e;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.ksp-tab:hover {
+    color: #1d2327;
+}
+
+.ksp-tab.is-active {
+    color: #1d2327;
+    font-weight: 600;
+    border-bottom-color: #2271b1;
+}
+
+.ksp-tab:focus-visible {
+    outline: 2px solid #2271b1;
+    outline-offset: -2px;
+}
+
+.ksp-intro {
+    margin: 14px 0 0;
+    color: #50575e;
+}
+
+/* 見出しの幅を固定する（入力欄の幅に押されて見出しが 1 文字ずつ折り返さないように） */
+.ksp-table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.ksp-table th {
+    width: 170px;
+    padding-right: 12px;
+}
+
+/* 設定欄が狭いとき（プレビューと並べた中くらいの画面）は、見出しを入力欄の上に置く */
+@container ksp-main (max-width: 620px) {
+    .ksp-table,
+    .ksp-table tbody,
+    .ksp-table tr,
+    .ksp-table th,
+    .ksp-table td {
+        display: block;
+        width: auto;
+    }
+    .ksp-table th {
+        padding: 16px 0 6px;
+    }
+    .ksp-table td {
+        padding: 0 0 8px;
+    }
+    .ksp-table tr.ksp-sep th {
+        padding: 22px 0 4px;
+    }
+}
+
+.ksp-table tr.ksp-sep th {
+    padding: 22px 0 4px;
+    font-size: 14px;
+    border-bottom: 1px solid #dcdcde;
+}
+
+.ksp-check {
+    display: inline-block;
+    margin: 2px 0;
+}
+
+.ksp-sub {
+    margin: 8px 0 4px 24px;
+    padding: 4px 0 4px 14px;
+    border-left: 3px solid #dcdcde;
+}
+
+.ksp-sub p {
+    margin: 6px 0;
+}
+
+.ksp-pair {
+    margin: 0 0 8px;
+}
+
+.ksp-pair .ksp-check {
+    margin-right: 0;
+}
+
+input.is-off {
+    opacity: 0.55;
+}
+
+.ksp-unit {
+    color: #50575e;
+}
+
+.ksp-inline {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0 18px 6px 0;
+}
+
+.ksp-details summary {
+    cursor: pointer;
+    color: #2271b1;
+}
+
+.ksp-details[open] summary {
+    margin-bottom: 4px;
+}
+
+/* 画像の選択 */
+.ksp-media {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.ksp-media-thumb {
+    display: none;
+    max-width: 160px;
+    max-height: 100px;
+    border: 1px solid #dcdcde;
+    border-radius: 3px;
+    background: #f6f7f7;
+}
+
+.ksp-media.has-image .ksp-media-thumb {
+    display: block;
+}
+
+.ksp-media .ksp-media-clear {
+    display: none;
+    color: #b32d2e;
+}
+
+.ksp-media.has-image .ksp-media-clear {
+    display: inline;
+}
+
+/* 表示形式（図で選ぶ） */
+.ksp-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.ksp-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    width: 128px;
+    padding: 10px 8px 8px;
+    border: 2px solid #dcdcde;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #fff;
+}
+
+.ksp-card input {
+    position: absolute;
+    opacity: 0;
+}
+
+.ksp-card:hover {
+    border-color: #8c8f94;
+}
+
+.ksp-card:has(input:checked) {
+    border-color: #2271b1;
+    background: #f0f6fc;
+}
+
+.ksp-card:has(input:focus-visible) {
+    outline: 2px solid #2271b1;
+    outline-offset: 2px;
+}
+
+.ksp-card-label {
+    font-size: 13px;
+    text-align: center;
+}
+
+.ksp-card-pic,
+.ksp-thumb-none {
+    position: relative;
+    width: 96px;
+    height: 60px;
+    border-radius: 3px;
+    background:
+        linear-gradient(#dcdcde, #dcdcde) 8px 8px / 50% 4px no-repeat,
+        linear-gradient(#e8e8e9, #e8e8e9) 8px 18px / 80% 3px no-repeat,
+        linear-gradient(#e8e8e9, #e8e8e9) 8px 26px / 70% 3px no-repeat,
+        linear-gradient(#e8e8e9, #e8e8e9) 8px 34px / 76% 3px no-repeat,
+        #f6f7f7;
+    border: 1px solid #c3c4c7;
+    overflow: hidden;
+}
+
+.ksp-thumb-none {
+    width: 64px;
+    height: 40px;
+}
+
+.ksp-card-pic b,
+.ksp-thumb-none b {
+    position: absolute;
+    background: #2271b1;
+    border-radius: 2px;
+}
+
+.ksp-pic-center {
+    box-shadow: inset 0 0 0 100px rgba(0, 0, 0, 0.18);
+}
+
+.ksp-pic-center b {
+    left: 28%;
+    top: 22%;
+    width: 44%;
+    height: 56%;
+}
+
+.ksp-pic-bottom_bar b {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 20%;
+    border-radius: 0;
+}
+
+.ksp-pic-corner b {
+    right: 6%;
+    bottom: 8%;
+    width: 34%;
+    height: 40%;
+}
+
+/* 色 */
+.ksp-colors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+}
+
+.ksp-color {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.ksp-color input[type="color"] {
+    width: 36px;
+    height: 30px;
+    padding: 2px;
+    border: 1px solid #8c8f94;
+    border-radius: 4px;
+    background: #fff;
+    cursor: pointer;
+}
+
+/* 投稿・固定ページの選択 */
+.ksp-picker {
+    max-width: 560px;
+}
+
+.ksp-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 6px;
+}
+
+.ksp-chips:empty {
+    display: none;
+}
+
+.ksp-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    max-width: 100%;
+    padding: 2px 4px 2px 8px;
+    border: 1px solid #c3c4c7;
+    border-radius: 999px;
+    background: #f6f7f7;
+    font-size: 13px;
+}
+
+.ksp-chip-type {
+    padding: 0 6px;
+    border-radius: 3px;
+    background: #dcdcde;
+    color: #50575e;
+    font-size: 11px;
+    line-height: 1.7;
+    white-space: nowrap;
+}
+
+.ksp-chip-remove {
+    width: 22px;
+    height: 22px;
+    border: 0;
+    border-radius: 50%;
+    background: none;
+    color: #50575e;
+    font-size: 16px;
+    line-height: 22px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.ksp-chip-remove:hover,
+.ksp-chip-remove:focus-visible {
+    background: #dcdcde;
+    color: #b32d2e;
+}
+
+.ksp-picker-search {
+    position: relative;
+}
+
+.ksp-picker-results {
+    position: absolute;
+    z-index: 1000;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    max-width: 25em;
+    max-height: 260px;
+    overflow: auto;
+    margin: 2px 0 0;
+    padding: 4px 0;
+    background: #fff;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    list-style: none;
+}
+
+.ksp-picker-results li {
+    margin: 0;
+}
+
+.ksp-picker-item {
+    display: block;
+    width: 100%;
+    padding: 6px 10px;
+    border: 0;
+    background: none;
+    text-align: left;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.ksp-picker-item:hover,
+.ksp-picker-item:focus {
+    background: #f0f6fc;
+    outline: none;
+}
+
+.ksp-picker-note {
+    padding: 6px 10px;
+    color: #646970;
+}
+
+/* カテゴリー・権限 */
+.ksp-checklist {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 4px 12px;
+    max-width: 640px;
+    max-height: 220px;
+    overflow: auto;
+    padding: 8px 10px;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+}
+
+/* A/B テスト */
+.ksp-ab {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin: 10px 0;
+}
+
+.ksp-ab-col {
+    padding: 10px 12px;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+}
+
+.ksp-ab-col h4 {
+    margin: 0 0 6px;
+}
+
+/* プレビュー */
+.ksp-preview {
+    padding: 14px 16px 16px;
+    border-top: 1px solid #dcdcde;
+    background: #fbfbfc;
+    border-radius: 0 0 4px 0;
+}
+
+.ksp-preview-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+.ksp-preview-head strong {
+    margin-right: auto;
+}
+
+.ksp-seg {
+    display: inline-flex;
+    border: 1px solid #8c8f94;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.ksp-seg[hidden] {
+    display: none;
+}
+
+.ksp-seg button {
+    padding: 3px 10px;
+    border: 0;
+    background: #fff;
+    color: #1d2327;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.ksp-seg button + button {
+    border-left: 1px solid #8c8f94;
+}
+
+.ksp-seg button.is-active {
+    background: #2271b1;
+    color: #fff;
+}
+
+.ksp-seg button:focus-visible {
+    outline: 2px solid #2271b1;
+    outline-offset: -3px;
+}
+
+.ksp-preview-full {
+    font-size: 12px;
+}
+
+.ksp-frame {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #c3c4c7;
+    border-radius: 4px;
+    background: #fff;
+}
+
+.ksp-frame[data-device="mobile"] {
+    background: #f0f0f1;
+}
+
+.ksp-frame-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: 0 0;
+    overflow: hidden;
+    background: #fff;
+}
+
+.ksp-frame[data-device="mobile"] .ksp-frame-inner {
+    outline: 1px solid #c3c4c7;
+}
+
+/* プレビューは入力のたびに描き直すので、出てくる動きは付けない */
+.ksp-frame .kashiwazaki-staypop-box,
+.ksp-full .kashiwazaki-staypop-box {
+    animation: none !important;
+}
+
+.ksp-frame .kashiwazaki-staypop-root {
+    z-index: 2;
+}
+
+/* 仮のページ（本文の行に見立てたもの） */
+.ksp-fake-page {
+    position: absolute;
+    inset: 0;
+    padding: 48px 8% 0;
+    background: #fff;
+}
+
+.ksp-fake-page i {
+    display: block;
+    height: 14px;
+    margin-bottom: 22px;
+    border-radius: 7px;
+    background: #ececed;
+}
+
+.ksp-fake-page i:first-child {
+    width: 55%;
+    height: 26px;
+    margin-bottom: 34px;
+    background: #dcdcde;
+}
+
+.ksp-fake-page i:nth-child(3n) {
+    width: 78%;
+}
+
+.ksp-fake-page i:nth-child(3n + 2) {
+    width: 92%;
+}
+
+.ksp-preview-foot {
+    margin-top: 12px;
+}
+
+.ksp-unsaved {
+    margin: 8px 0 0;
+    padding: 6px 10px;
+    border-left: 4px solid #dba617;
+    background: #fcf9e8;
+    font-size: 12px;
+}
+
+/* スマホのプレビューでは、サイトのスマホ幅と同じ見た目にする（frontend.css の 600px 以下と同じ） */
+.ksp-frame[data-device="mobile"] .kashiwazaki-staypop-format-bottom_bar .kashiwazaki-staypop-box,
+.ksp-full-stage[data-device="mobile"] .kashiwazaki-staypop-format-bottom_bar .kashiwazaki-staypop-box {
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.ksp-frame[data-device="mobile"] .kashiwazaki-staypop-format-bottom_bar .kashiwazaki-staypop-image,
+.ksp-full-stage[data-device="mobile"] .kashiwazaki-staypop-format-bottom_bar .kashiwazaki-staypop-image {
+    max-width: 96px;
+    max-height: 64px;
+}
+
+.ksp-frame[data-device="mobile"] .kashiwazaki-staypop-format-bottom_bar .kashiwazaki-staypop-close,
+.ksp-full-stage[data-device="mobile"] .kashiwazaki-staypop-format-bottom_bar .kashiwazaki-staypop-close {
+    top: 8px;
+    transform: none;
+}
+
+/* 実物大で見る */
+.ksp-full {
+    position: fixed;
+    inset: 0;
+    z-index: 160000;
+    display: flex;
+    flex-direction: column;
+    background: #50575e;
+}
+
+.ksp-full-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 16px;
+    background: #1d2327;
+    color: #f0f0f1;
+}
+
+.ksp-full-stage {
+    position: relative;
+    flex: 1 1 auto;
+    overflow: hidden;
+    transform: translateZ(0); /* 中の position: fixed をこの枠に閉じ込める */
+    background: #fff;
+}
+
+.ksp-full-stage[data-device="mobile"] {
+    flex: 0 0 auto;
+    width: 390px;
+    max-width: calc(100% - 32px);
+    height: min(780px, calc(100% - 32px));
+    margin: 16px auto;
+    border-radius: 12px;
+}
+
+/* 狭い画面 */
+@media (max-width: 782px) {
+    .ksp-table th {
+        width: auto;
+    }
+    .ksp-tab {
+        padding: 10px 8px 8px;
+        font-size: 13px;
+    }
+    .ksp-list .ksp-col-format,
+    .ksp-list .ksp-col-stats,
+    .ksp-list .ksp-col-thumb {
+        display: none;
+    }
+    .ksp-list .ksp-col-status {
+        width: auto;
+    }
+}

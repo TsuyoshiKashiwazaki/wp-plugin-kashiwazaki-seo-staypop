@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>内容タブ - Kashiwazaki SEO StayPop マニュアル</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <button class="hamburger-btn" aria-label="メニューを開く">&#9776;</button>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2 style="color:#fff;">SEO StayPop</h2>
+            <span class="version">v1.0.0</span>
+            <img src="images/main-visual.png" alt="" style="width:100%;border-radius:4px;margin-top:8px;">
+        </div>
+        <ul>
+            <li><a href="index.html">概要</a></li>
+            <li><a href="setup.html">インストール・初期設定</a></li>
+            <li><a href="banners.html">バナー一覧</a></li>
+            <li><a href="editor.html">編集画面の見方</a></li>
+            <li><a href="editor-content.html" class="active">内容タブ</a></li>
+            <li><a href="editor-design.html">デザインタブ</a></li>
+            <li><a href="editor-timing.html">表示のタイミングタブ</a></li>
+            <li><a href="editor-pages.html">表示するページタブ</a></li>
+            <li><a href="editor-schedule.html">回数・期間タブ</a></li>
+            <li><a href="editor-audience.html">出し分けタブ</a></li>
+            <li><a href="editor-measure.html">成果・A/Bテストタブ</a></li>
+            <li><a href="test-display.html">サイトでテスト表示</a></li>
+            <li><a href="formats.html">サイトでの表示</a></li>
+            <li><a href="stats.html">集計タブ</a></li>
+            <li><a href="settings.html">設定タブ</a></li>
+            <li><a href="glossary.html">用語集</a></li>
+            <li><a href="troubleshooting.html">トラブルシューティング</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <h1>内容タブ</h1>
+        <p class="lead">バナーに表示する画像・見出し・説明文・ボタン・小さなリンクを入れるタブです。</p>
+
+        <figure class="screenshot">
+            <img src="images/screenshots/11-tab-content.png" alt="内容タブ" class="lightbox-trigger">
+            <figcaption>内容タブ（右のプレビューに入力内容がすぐ反映されます）</figcaption>
+        </figure>
+
+        <figure class="infographic">
+            <img src="images/infographics/content-parts.png" alt="バナーの部品（画像・見出し・説明文・ボタン・サブリンク・閉じるボタン）">
+            <figcaption>バナーは、画像・見出し・説明文・ボタン・サブリンクの組み合わせでできています</figcaption>
+        </figure>
+
+        <h2>項目の一覧</h2>
+        <table>
+            <thead>
+                <tr><th style="width:26%;">項目</th><th style="width:24%;">種類</th><th style="width:22%;">初期値</th><th>空にしたとき</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>テンプレート</td><td>プルダウン ＋ ボタン</td><td>カスタム</td><td>-</td></tr>
+                <tr><td>画像</td><td>画像を選ぶ</td><td>なし</td><td>画像なしのバナーになります</td></tr>
+                <tr><td>スマホ用の画像</td><td>画像を選ぶ（任意）</td><td>なし</td><td>スマホでも「画像」を使います</td></tr>
+                <tr><td>見出し</td><td>1行の文字</td><td>ここに見出しを入力</td><td>見出しを表示しません</td></tr>
+                <tr><td>説明文</td><td>複数行の文字</td><td>お得な情報をお届けします。</td><td>説明文を表示しません</td></tr>
+                <tr><td>ボタンの文言</td><td>1行の文字</td><td>詳しく見る</td><td>ボタンを表示しません</td></tr>
+                <tr><td>ボタンのリンク先</td><td>URL ＋ チェックボックス</td><td>なし</td><td>ボタンを押しても別のページへは移動しません</td></tr>
+                <tr><td>サブリンク（文言・リンク先）</td><td>1行の文字 ＋ URL（任意）</td><td>なし</td><td>サブリンクを表示しません</td></tr>
+            </tbody>
+        </table>
+
+        <h2>テンプレート</h2>
+        <p><strong>何をするものか:</strong> よくある目的の文言（見出し・説明文・ボタンの文言）をまとめて入れます。</p>
+        <p><strong>いつ使うか:</strong> 何を書けばよいか迷うときの下書きとして使います。入れたあとで自由に書き換えられます。</p>
+        <div class="step"><div class="step-number">1</div><div class="step-content"><p>プルダウンからテンプレートを選びます。</p></div></div>
+        <div class="step"><div class="step-number">2</div><div class="step-content"><p>横の<strong>「この文言を入れる」</strong>を押します。</p></div></div>
+        <div class="step"><div class="step-number">3</div><div class="step-content"><p>見出し・説明文・ボタンの文言のどれかにすでに文字が入っていると、「見出し・説明文・ボタンの文言を、このテンプレートの文言に置き換えます。よろしいですか？」と確認が表示されます。「OK」を押すと置き換わります。</p></div></div>
+
+        <table>
+            <thead>
+                <tr><th style="width:16%;">テンプレート</th><th style="width:28%;">入る見出し</th><th>入る説明文</th><th style="width:18%;">入るボタンの文言</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>カスタム</td><td>（入れる文言はありません。「この文言を入れる」は押せません）</td><td></td><td></td></tr>
+                <tr><td>クーポン</td><td>【限定】クーポンをプレゼント</td><td>このページをご覧の方だけに、特別クーポンをご用意しました。</td><td>クーポンを受け取る</td></tr>
+                <tr><td>資料請求</td><td>資料請求はこちら</td><td>詳しい資料を無料でお送りします。お気軽にご請求ください。</td><td>資料を請求する</td></tr>
+                <tr><td>LINE登録</td><td>LINEで最新情報を受け取る</td><td>友だち追加で、お得な情報や限定のお知らせをお届けします。</td><td>友だち追加する</td></tr>
+                <tr><td>関連記事</td><td>こちらの記事もおすすめ</td><td>あわせて読みたい関連記事をピックアップしました。</td><td>関連記事を読む</td></tr>
+                <tr><td>問い合わせ誘導</td><td>ご不明な点はありませんか？</td><td>お気軽にお問い合わせください。担当者がご対応します。</td><td>問い合わせる</td></tr>
+            </tbody>
+        </table>
+
+        <div class="callout callout-note">
+            <p>テンプレートで変わるのは、見出し・説明文・ボタンの文言の3つだけです。ボタンのリンク先・画像・デザイン・表示のタイミングは変わりません。プルダウンを選んだだけでは文言は入りません（「この文言を入れる」を押したときに入ります）。</p>
+        </div>
+
+        <h2>画像</h2>
+        <p><strong>何をするものか:</strong> バナーの上部に画像を表示します。</p>
+        <div class="step"><div class="step-number">1</div><div class="step-content"><p><strong>「画像を選ぶ」</strong>を押します。WordPress のメディアの画面が開きます。</p></div></div>
+        <div class="step"><div class="step-number">2</div><div class="step-content"><p>画像を選ぶか、新しい画像をアップロードし、<strong>「この画像を使う」</strong>を押します。</p></div></div>
+        <div class="step"><div class="step-number">3</div><div class="step-content"><p>選んだ画像の縮小版が表示されます。外すときは<strong>「外す」</strong>を押します。</p></div></div>
+
+        <ul>
+            <li>画像だけのバナーにしたいときは、見出しと説明文を空にします。</li>
+            <li>画像の代わりの文字（読み上げ用）には、見出しが使われます。</li>
+            <li>下部バナーでは、画像は左側に小さく表示されます。</li>
+        </ul>
+        <h2>スマホ用の画像</h2>
+        <p>スマホで見たときだけ、別の画像を使いたいときに選びます。欄の下に「任意。空ならスマホでも上の画像を使います。」と表示されているとおり、空なら、スマホでも「画像」を使います。縦長の画像に差し替えたいときなどに使います。</p>
+        <div class="callout callout-note">
+            <p>A/B テストのパターンに画像を入れた場合は、PC でもスマホでもパターンの画像が使われます（<a href="editor-measure.html">成果・A/Bテストタブ</a>）。</p>
+        </div>
+
+        <h2>見出し・説明文</h2>
+        <p>見出しは太字で大きく、説明文はその下に表示されます。説明文の改行は、そのまま改行として表示されます。どちらも空にすると表示されません。</p>
+        <h2>ボタンの文言・ボタンのリンク先</h2>
+        <ul>
+            <li><strong>ボタンの文言</strong>を空にすると、ボタンを表示しません（「閉じる」の × は常に表示されます）。</li>
+            <li><strong>ボタンのリンク先</strong>には、押したときに開くページの URL を入れます。https:// から入れてください。</li>
+            <li><strong>新しいタブで開く</strong>にチェックを入れると、リンク先を新しいタブで開きます。元のページのバナーは開いたままです。</li>
+            <li>訪問者がボタンを押すと「クリック」として数えます（計測がオンのとき）。</li>
+        </ul>
+        <div class="callout callout-warning">
+            <p>リンク先を空にしたままにすると、ボタンを押しても別のページへは移動しません。公開する前に、<a href="test-display.html">サイトでテスト表示</a>でリンク先を確かめてください。</p>
+        </div>
+
+        <h2>サブリンク</h2>
+        <p><strong>「ボタンの横に小さなリンクを出す（任意）」</strong>を押すと、文言とリンク先の欄が開きます。ボタンの横に、下線付きの小さなリンクを表示します（「料金を見る」「くわしくはこちら」など、ボタンほど目立たせたくない案内に使います）。</p>
+        <figure class="screenshot">
+            <img src="images/screenshots/12-content-sublink.png" alt="サブリンクの欄を開いたところ" class="lightbox-trigger">
+            <figcaption>サブリンクの欄を開いたところ</figcaption>
+        </figure>
+
+        <ul>
+            <li>文言とリンク先の<strong>両方</strong>を入れたときだけ表示されます。</li>
+            <li>サブリンクは同じタブで開きます。サブリンクを押しても「クリック」には数えません（クリックとして数えるのはボタンだけです）。</li>
+        </ul>
+
+        <nav class="page-nav">
+            <a href="editor.html" class="prev">&laquo; 編集画面の見方</a>
+            <a href="editor-design.html" class="next">デザインタブ &raquo;</a>
+        </nav>
+
+        <footer class="manual-footer">
+            <p>作者: <a href="https://www.tsuyoshikashiwazaki.jp/profile/" target="_blank" rel="noopener">柏崎剛（Tsuyoshi Kashiwazaki）</a></p>
+            <p>プラグイン: Kashiwazaki SEO StayPop v1.0.0 | <a href="https://github.com/TsuyoshiKashiwazaki/wp-plugin-kashiwazaki-seo-staypop" target="_blank" rel="noopener">GitHub</a></p>
+        </footer>
+    </main>
+
+    <div class="lightbox"></div>
+    <script src="js/manual.js"></script>
+</body>
+</html>

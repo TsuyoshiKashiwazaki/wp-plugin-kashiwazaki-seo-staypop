@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表示のタイミングタブ - Kashiwazaki SEO StayPop マニュアル</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <button class="hamburger-btn" aria-label="メニューを開く">&#9776;</button>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2 style="color:#fff;">SEO StayPop</h2>
+            <span class="version">v1.0.0</span>
+            <img src="images/main-visual.png" alt="" style="width:100%;border-radius:4px;margin-top:8px;">
+        </div>
+        <ul>
+            <li><a href="index.html">概要</a></li>
+            <li><a href="setup.html">インストール・初期設定</a></li>
+            <li><a href="banners.html">バナー一覧</a></li>
+            <li><a href="editor.html">編集画面の見方</a></li>
+            <li><a href="editor-content.html">内容タブ</a></li>
+            <li><a href="editor-design.html">デザインタブ</a></li>
+            <li><a href="editor-timing.html" class="active">表示のタイミングタブ</a></li>
+            <li><a href="editor-pages.html">表示するページタブ</a></li>
+            <li><a href="editor-schedule.html">回数・期間タブ</a></li>
+            <li><a href="editor-audience.html">出し分けタブ</a></li>
+            <li><a href="editor-measure.html">成果・A/Bテストタブ</a></li>
+            <li><a href="test-display.html">サイトでテスト表示</a></li>
+            <li><a href="formats.html">サイトでの表示</a></li>
+            <li><a href="stats.html">集計タブ</a></li>
+            <li><a href="settings.html">設定タブ</a></li>
+            <li><a href="glossary.html">用語集</a></li>
+            <li><a href="troubleshooting.html">トラブルシューティング</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <h1>表示のタイミングタブ</h1>
+        <p class="lead">バナーを「いつ」表示するかを決めるタブです。チェックした「きっかけ」が起きたその瞬間に表示します。</p>
+
+        <figure class="screenshot">
+            <img src="images/screenshots/15-tab-timing.png" alt="表示のタイミングタブ" class="lightbox-trigger">
+            <figcaption>表示のタイミングタブ（初期の状態に「ページを30秒見たとき」を足した例）</figcaption>
+        </figure>
+
+        <figure class="infographic">
+            <img src="images/infographics/timing-triggers.png" alt="4つのきっかけと、きっかけが起きた瞬間にだけ表示する決まり">
+            <figcaption>4つのきっかけ。起きた瞬間にだけ表示し、開いた直後や入力中は見送ります</figcaption>
+        </figure>
+
+        <h2>表示の決まり（大切な考え方）</h2>
+        <p>タブのいちばん上には「チェックした「きっかけ」が起きた瞬間に表示します。」と表示されています。</p>
+        <ul>
+            <li>バナーは、チェックした<strong>きっかけが起きたその瞬間</strong>に表示します。</li>
+            <li>その瞬間が「開いた直後」や「入力中」などに当たったときは、そのきっかけは<strong>見送ります</strong>。あとからまとめて表示することはありません（次のきっかけを待ちます）。</li>
+            <li>1つのページで表示するバナーは<strong>1つだけ</strong>です。一度表示したら、そのページではほかのバナーは表示しません。</li>
+            <li>いつ表示されるかは、画面上部と一覧に文章で表示されます（例:「マウスが画面の上端から外に出たとき、または 30秒見たとき」）。</li>
+        </ul>
+        <h2>項目の一覧</h2>
+        <table>
+            <thead>
+                <tr><th style="width:38%;">項目</th><th style="width:20%;">種類</th><th style="width:20%;">初期値</th><th>入力できる範囲</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>PC：マウスが画面の上端から外に出たとき</td><td>チェックボックス</td><td>オン</td><td>-</td></tr>
+                <tr><td>感度</td><td>プルダウン</td><td>標準</td><td>高い / 標準 / 低い</td></tr>
+                <tr><td>表示までの待ち時間</td><td>数字（秒）</td><td>0 秒</td><td>0〜5 秒（0.1 秒きざみ）</td></tr>
+                <tr><td>スマホ：下に読んだあと、上に戻るスクロールをしたとき</td><td>チェックボックス</td><td>オン</td><td>-</td></tr>
+                <tr><td>ページを ○ 秒見たとき</td><td>チェックボックス ＋ 数字</td><td>オフ（数字は 30）</td><td>1〜3600 秒</td></tr>
+                <tr><td>ページを ○ ％までスクロールしたとき</td><td>チェックボックス ＋ 数字</td><td>オフ（数字は 50）</td><td>1〜100 %</td></tr>
+                <tr><td>組み合わせ</td><td>ラジオボタン</td><td>どれか1つが起きたとき</td><td>どれか1つ / すべてそろったとき</td></tr>
+                <tr><td>開いた直後：ページを開いてから ○ 秒は表示しない</td><td>数字（秒）</td><td>5 秒</td><td>0〜3600 秒</td></tr>
+            </tbody>
+        </table>
+
+        <h2>PC：マウスが画面の上端から外に出たとき</h2>
+        <p><strong>何をするものか:</strong> パソコンで、マウスが画面の上端から外に出た瞬間（タブやアドレスバー、閉じるボタンへ向かったとき）に表示します。帰ろうとしている人に、最後の案内を見せる使い方です。</p>
+        <p>チェックを入れると、次の2つの項目が表示されます。</p>
+        <table>
+            <thead>
+                <tr><th style="width:25%;">項目</th><th>選択肢・内容</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>感度</td><td><strong>高い</strong>: 上端の近くで外に出ても反応します。<br><strong>標準</strong>: 初期値です。<br><strong>低い</strong>: 上端ちょうどから外に出たときだけ反応します。<br>（読み込んだバナーなどで、この3つ以外の値が設定されているときは「カスタム（上端から ○px 以内）」と表示されます）</td></tr>
+                <tr><td>表示までの待ち時間</td><td>マウスが外に出てから、表示するまで待つ秒数です。待っている間にマウスが画面に戻ったら表示しません。うっかり上へ動かしただけの人に出にくくなります。</td></tr>
+            </tbody>
+        </table>
+
+        <p>次のときは、きっかけとして数えません。</p>
+        <ul>
+            <li>マウスを少し動かしただけのとき（ページを開いてから、ある程度マウスを動かすまでは数えません）</li>
+            <li>画面の左右から外に出たとき</li>
+            <li>ページの中の動画や地図などの埋め込みに入ったとき</li>
+            <li>ページの中のプルダウンを開いたとき</li>
+        </ul>
+        <h2>スマホ：下に読んだあと、上に戻るスクロールをしたとき</h2>
+        <p><strong>何をするものか:</strong> スマホでは、マウスが画面の外に出ることがありません。代わりに、ある程度下まで読んだ人が、ページの上へ戻るスクロールをした瞬間に表示します。読み終えて戻ろうとしている人への案内です。</p>
+        <ul>
+            <li>あまり下まで読んでいない人の上スクロールや、少しだけ戻したときは数えません。</li>
+            <li>ページを開いた直後に、ブラウザが前に見ていた位置へスクロールを戻す動きは数えません。</li>
+        </ul>
+        <div class="callout callout-note">
+            <p><strong>PC とスマホの見分け方:</strong> 画面の幅が狭いとき（目安として 782px 以下）や、スマホのブラウザで見ているときは「スマホ」として扱います。それ以外は「PC」です。</p>
+        </div>
+
+        <h2>PC・スマホ共通</h2>
+        <p>どちらの端末でも使えるきっかけです。チェックボックスにチェックを入れて、数字を決めます。数字の欄を触ると、チェックは自動でオンになります。</p>
+        <table>
+            <thead>
+                <tr><th style="width:30%;">項目</th><th>内容</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>ページを ○ 秒見たとき</td><td>ページを指定した秒数見た瞬間に表示します。数えるのは<strong>ページが画面に出ていた時間だけ</strong>で、別のタブを見ている間は数えません。</td></tr>
+                <tr><td>ページを ○ ％までスクロールしたとき</td><td>ページの指定した位置（ページ全体を 100 % としたときの割合）まで、初めてスクロールした瞬間に表示します。一度その位置まで読めば、上に戻っても条件は満たしたままです。</td></tr>
+            </tbody>
+        </table>
+
+        <div class="callout callout-warning">
+            <p>スクロールできない短いページでは、「○％までスクロールしたとき」は起きません。</p>
+        </div>
+
+        <h2>組み合わせ</h2>
+        <p>きっかけを2つ以上チェックしたときだけ表示されます。</p>
+        <table>
+            <thead>
+                <tr><th style="width:38%;">選択肢</th><th>表示するとき</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>どれか1つが起きたとき（初期値）</td><td>チェックしたきっかけのどれか1つが起きた瞬間に表示します。</td></tr>
+                <tr><td>すべてそろったとき（例：30秒以上見て、50％以上スクロールした人）</td><td>「○秒見た」「○％スクロールした」の条件をすべて満たしたときに表示します。マウスが上端から外に出たとき（PC）・上に戻るスクロール（スマホ）もチェックしている場合は、条件を満たしたあとで<strong>離れそうになった瞬間</strong>に表示します。</td></tr>
+            </tbody>
+        </table>
+
+        <figure class="screenshot">
+            <img src="images/screenshots/18-timing-all.png" alt="組み合わせで「すべてそろったとき」を選んだ例" class="lightbox-trigger">
+            <figcaption>「すべてそろったとき」の例。上部の要約が「60秒以上見て、70%以上スクロールしてから、マウスが画面の上端から外に出たとき」になります</figcaption>
+        </figure>
+
+        <h2>開いた直後</h2>
+        <p><strong>何をするものか:</strong> ページを開いてから指定した秒数の間は、きっかけが起きても表示しません。読み始めたばかりの人に表示するのを防ぎます。</p>
+        <ul>
+            <li>この間に起きたきっかけは数えません。あとからまとめて表示することもありません。</li>
+            <li>「ページを ○ 秒見たとき」の秒数がこれより短いときは、長いほう（開いた直後の秒数）に合わせます。画面の要約の文も、その秒数で表示されます。</li>
+            <li>このほか、欄の下に「マウスを少し動かしただけのときや、フォームに入力している間（入力のあと10秒も）は、自動的に表示しません。」と書かれているとおり、<strong>フォームに入力している間と、入力のあと 10 秒間</strong>は表示しません。</li>
+            <li>「○ 秒見たとき」が入力中などで見送られたときだけは、次にスクロールした瞬間にもう一度確かめて、表示できるなら表示します。</li>
+        </ul>
+        <h2>きっかけを何もチェックしないと</h2>
+        <p>どのきっかけにもチェックを入れない場合は、「開いた直後」の秒数（最低 1 秒）がたったときに表示します。画面の要約には「○秒たったとき」と表示されます。</p>
+        <h2>ほかのバナーと重なったとき</h2>
+        <p>複数のバナーの表示のきっかけがほぼ同時に起きたときは、<a href="editor-schedule.html">「回数・期間」タブの優先度</a>が大きいバナーを1つだけ表示します。</p>
+        <div class="callout callout-tip">
+            <p><strong>おすすめ:</strong> 初期の状態（PC はマウスが上端から外へ、スマホは上に戻るスクロール、開いてから 5 秒は表示しない）が、読むのをじゃましにくい設定です。表示が多すぎると感じたら、感度を「低い」にするか、待ち時間を 0.3〜0.5 秒ほどにします。</p>
+        </div>
+
+
+        <nav class="page-nav">
+            <a href="editor-design.html" class="prev">&laquo; デザインタブ</a>
+            <a href="editor-pages.html" class="next">表示するページタブ &raquo;</a>
+        </nav>
+
+        <footer class="manual-footer">
+            <p>作者: <a href="https://www.tsuyoshikashiwazaki.jp/profile/" target="_blank" rel="noopener">柏崎剛（Tsuyoshi Kashiwazaki）</a></p>
+            <p>プラグイン: Kashiwazaki SEO StayPop v1.0.0 | <a href="https://github.com/TsuyoshiKashiwazaki/wp-plugin-kashiwazaki-seo-staypop" target="_blank" rel="noopener">GitHub</a></p>
+        </footer>
+    </main>
+
+    <div class="lightbox"></div>
+    <script src="js/manual.js"></script>
+</body>
+</html>

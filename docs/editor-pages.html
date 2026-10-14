@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表示するページタブ - Kashiwazaki SEO StayPop マニュアル</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <button class="hamburger-btn" aria-label="メニューを開く">&#9776;</button>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2 style="color:#fff;">SEO StayPop</h2>
+            <span class="version">v1.0.0</span>
+            <img src="images/main-visual.png" alt="" style="width:100%;border-radius:4px;margin-top:8px;">
+        </div>
+        <ul>
+            <li><a href="index.html">概要</a></li>
+            <li><a href="setup.html">インストール・初期設定</a></li>
+            <li><a href="banners.html">バナー一覧</a></li>
+            <li><a href="editor.html">編集画面の見方</a></li>
+            <li><a href="editor-content.html">内容タブ</a></li>
+            <li><a href="editor-design.html">デザインタブ</a></li>
+            <li><a href="editor-timing.html">表示のタイミングタブ</a></li>
+            <li><a href="editor-pages.html" class="active">表示するページタブ</a></li>
+            <li><a href="editor-schedule.html">回数・期間タブ</a></li>
+            <li><a href="editor-audience.html">出し分けタブ</a></li>
+            <li><a href="editor-measure.html">成果・A/Bテストタブ</a></li>
+            <li><a href="test-display.html">サイトでテスト表示</a></li>
+            <li><a href="formats.html">サイトでの表示</a></li>
+            <li><a href="stats.html">集計タブ</a></li>
+            <li><a href="settings.html">設定タブ</a></li>
+            <li><a href="glossary.html">用語集</a></li>
+            <li><a href="troubleshooting.html">トラブルシューティング</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <h1>表示するページタブ</h1>
+        <p class="lead">バナーを表示するページと、表示しないページを決めるタブです。</p>
+
+        <figure class="screenshot">
+            <img src="images/screenshots/17-tab-pages.png" alt="表示するページタブ" class="lightbox-trigger">
+            <figcaption>表示するページタブ（サイト全体に表示し、完了ページなどを除外した例）</figcaption>
+        </figure>
+
+        <figure class="infographic">
+            <img src="images/infographics/page-targeting.png" alt="表示する場所で絞り込み、表示しないページを除く流れ">
+            <figcaption>「表示する場所」で絞り込み、「表示しないページ」に当てはまるページを除きます</figcaption>
+        </figure>
+
+        <h2>項目の一覧</h2>
+        <table>
+            <thead>
+                <tr><th style="width:18%;">区分</th><th style="width:20%;">項目</th><th>種類</th><th style="width:14%;">初期値</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>表示する場所</td><td>表示する場所</td><td>ラジオボタン（サイト全体 / 指定したページだけ）</td><td>サイト全体</td></tr>
+                <tr><td>表示する場所</td><td>URL・パス</td><td>複数行（1行に1つ）</td><td>空</td></tr>
+                <tr><td>表示する場所</td><td>投稿・固定ページ</td><td>検索して追加</td><td>なし</td></tr>
+                <tr><td>表示する場所</td><td>カテゴリー</td><td>チェックボックスの一覧</td><td>なし</td></tr>
+                <tr><td>表示しないページ</td><td>URL・パス</td><td>複数行（1行に1つ）</td><td>空</td></tr>
+                <tr><td>表示しないページ</td><td>投稿・固定ページ</td><td>検索して追加</td><td>なし</td></tr>
+            </tbody>
+        </table>
+
+        <h2>表示する場所</h2>
+        <table>
+            <thead>
+                <tr><th style="width:25%;">選択肢</th><th>表示するページ</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>サイト全体（初期値）</td><td>すべての公開ページに表示します（下の「表示しないページ」を除く）。</td></tr>
+                <tr><td>指定したページだけ</td><td>「URL・パス」「投稿・固定ページ」「カテゴリー」の欄が表示されます。<strong>どれか1つにでも当てはまる</strong>ページに表示します。何も指定しないと、どのページにも表示されません。</td></tr>
+            </tbody>
+        </table>
+
+        <figure class="screenshot">
+            <img src="images/screenshots/16-pages-include-search.png" alt="指定したページだけを選び、投稿を検索しているところ" class="lightbox-trigger">
+            <figcaption>「指定したページだけ」を選ぶと、URL・パス、投稿・固定ページ、カテゴリーの欄が表示されます（投稿・固定ページの欄で検索しているところ）</figcaption>
+        </figure>
+
+        <h3>URL・パスの書き方</h3>
+        <table>
+            <thead>
+                <tr><th style="width:38%;">書き方</th><th>当てはまるページ</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><code>/campaign/</code></td><td>/campaign/ と、その下のページすべて（/campaign/spring/ など）</td></tr>
+                <tr><td><code>/blog/*</code></td><td>* はどんな文字にも当てはまります（ワイルドカード）。/blog/ で始まるページすべて</td></tr>
+                <tr><td><code>/</code></td><td>トップページだけ</td></tr>
+                <tr><td><code>https://<wbr>example.com<wbr>/campaign/</code></td><td>https:// から書いても構いません。ドメインの後ろの部分（/campaign/）で判断します</td></tr>
+            </tbody>
+        </table>
+
+        <ul>
+            <li>1行に1つずつ書きます。空の行は無視されます。</li>
+            <li>URL の ? から後ろ（パラメータ）は判断に使いません。</li>
+            <li>日本語の URL は、日本語のままでも書けます。</li>
+        </ul>
+        <h3>投稿・固定ページ</h3>
+        <div class="step"><div class="step-number">1</div><div class="step-content"><p>「タイトルで検索して追加」の欄に、タイトルの一部（または投稿の番号）を入力します。「検索中…」のあと、候補が最大 20 件表示されます。</p></div></div>
+        <div class="step"><div class="step-number">2</div><div class="step-content"><p>候補をクリックすると、欄の上に「投稿」「固定ページ」の印の付いた札として追加されます。</p></div></div>
+        <div class="step"><div class="step-number">3</div><div class="step-content"><p>外すときは、札の × を押します。</p></div></div>
+
+        <ul>
+            <li>検索できるのは<strong>「投稿」と「固定ページ」</strong>です。それ以外の種類のページ（独自の投稿タイプ）は、「URL・パス」で指定してください。</li>
+            <li>候補が無いときは「見つかりませんでした」と表示されます。</li>
+            <li>非公開や予約中の記事は、その記事を読める権限のある人にだけ候補に出ます。読めない記事がすでに指定されている場合は、「（表示できない記事 #番号）」と表示されます（指定は消えません）。</li>
+            <li>キーボードでは、下矢印で候補へ移り、Enter で追加、Esc で候補を閉じます。</li>
+        </ul>
+        <h3>カテゴリー</h3>
+        <p>チェックしたカテゴリーの<strong>一覧ページ</strong>と、そのカテゴリーの<strong>投稿</strong>に表示します。カテゴリーが1つも無いサイトでは「選べるものがありません。」と表示されます。</p>
+        <h2>表示しないページ</h2>
+        <p>ここに当てはまるページには、上の「表示する場所」に当てはまっていても<strong>表示しません</strong>。購入完了・問い合わせ完了・決済のページなど、バナーを出すと困るページを指定します。書き方は上と同じです。</p>
+        <div class="callout callout-tip">
+            <p><strong>おすすめ:</strong> 購入や問い合わせの完了ページ（例: <code>/thanks/</code>）と決済のページ（例: <code>/checkout/*</code>）は、表示しないページに入れておきましょう。</p>
+        </div>
+
+        <div class="callout callout-note">
+            <p>「成果ページ」（<a href="editor-measure.html">成果・A/Bテストタブ</a>）を「表示しないページ」に入れても、成果は数えられます。</p>
+        </div>
+
+
+        <nav class="page-nav">
+            <a href="editor-timing.html" class="prev">&laquo; 表示のタイミングタブ</a>
+            <a href="editor-schedule.html" class="next">回数・期間タブ &raquo;</a>
+        </nav>
+
+        <footer class="manual-footer">
+            <p>作者: <a href="https://www.tsuyoshikashiwazaki.jp/profile/" target="_blank" rel="noopener">柏崎剛（Tsuyoshi Kashiwazaki）</a></p>
+            <p>プラグイン: Kashiwazaki SEO StayPop v1.0.0 | <a href="https://github.com/TsuyoshiKashiwazaki/wp-plugin-kashiwazaki-seo-staypop" target="_blank" rel="noopener">GitHub</a></p>
+        </footer>
+    </main>
+
+    <div class="lightbox"></div>
+    <script src="js/manual.js"></script>
+</body>
+</html>

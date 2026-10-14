@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>トラブルシューティング - Kashiwazaki SEO StayPop マニュアル</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <button class="hamburger-btn" aria-label="メニューを開く">&#9776;</button>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2 style="color:#fff;">SEO StayPop</h2>
+            <span class="version">v1.0.0</span>
+            <img src="images/main-visual.png" alt="" style="width:100%;border-radius:4px;margin-top:8px;">
+        </div>
+        <ul>
+            <li><a href="index.html">概要</a></li>
+            <li><a href="setup.html">インストール・初期設定</a></li>
+            <li><a href="banners.html">バナー一覧</a></li>
+            <li><a href="editor.html">編集画面の見方</a></li>
+            <li><a href="editor-content.html">内容タブ</a></li>
+            <li><a href="editor-design.html">デザインタブ</a></li>
+            <li><a href="editor-timing.html">表示のタイミングタブ</a></li>
+            <li><a href="editor-pages.html">表示するページタブ</a></li>
+            <li><a href="editor-schedule.html">回数・期間タブ</a></li>
+            <li><a href="editor-audience.html">出し分けタブ</a></li>
+            <li><a href="editor-measure.html">成果・A/Bテストタブ</a></li>
+            <li><a href="test-display.html">サイトでテスト表示</a></li>
+            <li><a href="formats.html">サイトでの表示</a></li>
+            <li><a href="stats.html">集計タブ</a></li>
+            <li><a href="settings.html">設定タブ</a></li>
+            <li><a href="glossary.html">用語集</a></li>
+            <li><a href="troubleshooting.html" class="active">トラブルシューティング</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <h1>トラブルシューティング</h1>
+        <p class="lead">よくある問題とその解決方法をまとめています。</p>
+
+        <figure class="infographic">
+            <img src="images/infographics/troubleshoot-flow.png" alt="バナーが表示されないときの確認の流れ">
+            <figcaption>バナーが表示されないときは、上から順に確かめます</figcaption>
+        </figure>
+
+        <h2>表示に関すること</h2>
+        <h3>バナーが表示されない</h3>
+        <p><strong>原因:</strong> 公開していない・「サイトに表示する」がオフ・掲載期間の外・表示するページや出し分けに当てはまらない・回数の制限に当たっている・きっかけが起きていない、のどれかです。</p>
+        <div class="step"><div class="step-number">1</div><div class="step-content"><p>バナー一覧の<strong>状態</strong>を見ます。「表示中」以外なら、札の意味（<a href="banners.html">バナー一覧</a>）に従って公開する・「表示する」を押す・掲載期間を見直します。</p></div></div>
+        <div class="step"><div class="step-number">2</div><div class="step-content"><p>一覧の<strong>表示のタイミング</strong>に「表示されません」と出ていないか確かめます。出ていれば、その端末で使えるきっかけを選びます（例: PC だけで使う「マウスが上端から外に出たとき」しか選んでいないと、スマホでは表示されません）。</p></div></div>
+        <div class="step"><div class="step-number">3</div><div class="step-content"><p><a href="editor-pages.html">表示するページ</a>と<a href="editor-audience.html">出し分け</a>の条件に、そのページと自分が当てはまっているか確かめます。</p></div></div>
+        <div class="step"><div class="step-number">4</div><div class="step-content"><p><a href="test-display.html">サイトでテスト表示</a>で、表示のきっかけが起きるか確かめます。テスト表示で出るのに、ふつうに見ると出ないときは、回数の制限・ページ・出し分けのどれかが原因です。</p></div></div>
+
+        <h3>一度表示されたあと、自分の画面で表示されなくなった</h3>
+        <p><strong>原因:</strong> 「表示する回数」と「閉じたあと ○ 日は表示しない」は、ブラウザごとに数えます。一度表示されたり閉じたりすると、その決まりの間は同じブラウザに表示されません。</p>
+        <div class="step"><div class="step-number">1</div><div class="step-content"><p>確かめるだけなら、<a href="test-display.html">サイトでテスト表示</a>を使います（回数の制限を無視します）。</p></div></div>
+        <div class="step"><div class="step-number">2</div><div class="step-content"><p>ふつうの表示で確かめたいときは、ブラウザのプライベートウィンドウ（シークレットウィンドウ）で開きます。</p></div></div>
+
+        <h3>ページを開いてすぐに表示されてしまう</h3>
+        <p><strong>原因:</strong> きっかけを何もチェックしていない（開いた直後の秒数がたつと表示されます）か、「○秒見たとき」の秒数が短い設定です。</p>
+        <div class="step"><div class="step-number">1</div><div class="step-content"><p><a href="editor-timing.html">表示のタイミングタブ</a>を開き、上部の要約の文を確かめます。</p></div></div>
+        <div class="step"><div class="step-number">2</div><div class="step-content"><p>「マウスが画面の上端から外に出たとき」「上に戻るスクロールをしたとき」などのきっかけを選び、「開いた直後」の秒数を長くします。</p></div></div>
+
+        <h3>表示されすぎる・うっかり出てしまう</h3>
+        <p><strong>原因:</strong> マウスを上へ動かしただけで反応している、または回数の制限がゆるい設定です。</p>
+        <div class="step"><div class="step-number">1</div><div class="step-content"><p>表示のタイミングタブで<strong>感度</strong>を「低い」にするか、<strong>表示までの待ち時間</strong>を 0.3〜0.5 秒ほどにします。</p></div></div>
+        <div class="step"><div class="step-number">2</div><div class="step-content"><p>回数・期間タブで<strong>表示する回数</strong>を「1回の訪問につき1回まで」や「1日1回まで」にし、<strong>閉じたあと ○ 日は表示しない</strong>を長くします。</p></div></div>
+
+        <h3>「○％までスクロールしたとき」で表示されない</h3>
+        <p><strong>原因:</strong> スクロールできない短いページでは、このきっかけは起きません。また、すでに読んだ位置より上では起きません。</p>
+        <div class="step"><div class="step-number">1</div><div class="step-content"><p>短いページでは、「○秒見たとき」など、ほかのきっかけを合わせて選びます。</p></div></div>
+
+        <h3>出し分けや掲載期間が反映されない（ページキャッシュを使っているサイト）</h3>
+        <p><strong>原因:</strong> ページの表示を速くするために、ページをまるごと保存して使い回す仕組み（キャッシュのプラグインやサーバーの機能）があると、保存されたときの条件のまま表示されることがあります。</p>
+        <div class="step"><div class="step-number">1</div><div class="step-content"><p>設定を変えたら、キャッシュを削除（クリア）します。</p></div></div>
+        <div class="step"><div class="step-number">2</div><div class="step-content"><p>ログインの状態・流入元・参照元で出し分けたいページは、お使いのキャッシュの設定で、キャッシュの対象から外せないか確かめます。</p></div></div>
+
+        <h2>テスト表示に関すること</h2>
+        <h3>テスト表示を押しても、左下の箱が出ない</h3>
+        <p><strong>原因:</strong> ログインしていない、そのバナーを編集できる権限がない、またはリンクの有効期限が切れています。この場合はふつうのページとして開きます。</p>
+        <div class="step"><div class="step-number">1</div><div class="step-content"><p>編集画面を開き直してから、もう一度「サイトでテスト表示」を押します。</p></div></div>
+        <div class="step"><div class="step-number">2</div><div class="step-content"><p>別のブラウザや端末で開くときは、そのブラウザで WordPress にログインしてから押します。</p></div></div>
+
+        <h3>テスト表示で「直前のきっかけ：マウスの移動が少ないため見送り」と出る</h3>
+        <p><strong>原因:</strong> ページを開いてから、マウスをあまり動かしていません。</p>
+        <div class="step"><div class="step-number">1</div><div class="step-content"><p>ページの上でマウスを少し動かしてから、もう一度マウスを画面の上端から外に出します。</p></div></div>
+
+        <h2>集計に関すること</h2>
+        <h3>集計が 0 のまま増えない</h3>
+        <p><strong>原因:</strong> 計測がオフ、「同意した人だけ記録する」で同意の Cookie がない（または名前が空）、トラッキング拒否の人だけが見ている、のどれかです。テスト表示とプレビューは記録しません。</p>
+        <div class="step"><div class="step-number">1</div><div class="step-content"><p><a href="settings.html">設定タブ</a>で「計測」にチェックが入っているか確かめます。</p></div></div>
+        <div class="step"><div class="step-number">2</div><div class="step-content"><p>「同意した人だけ記録する」を選んでいるなら、Cookie の名前が正しいか、同意バナーで同意したあとに見ているかを確かめます。</p></div></div>
+        <div class="step"><div class="step-number">3</div><div class="step-content"><p>自分のブラウザでトラッキング拒否を有効にしていないか確かめます。</p></div></div>
+
+        <h3>成果が数えられない</h3>
+        <p><strong>原因:</strong> 成果ページの指定がそのページの URL と一致していない、訪問者が同じブラウザでバナーを見て（またはクリックして）いない、バナーが停止中、計測が許されていない、のどれかです。成果はバナーごと・ブラウザごとに1回だけ数えます。</p>
+        <div class="step"><div class="step-number">1</div><div class="step-content"><p><a href="editor-measure.html">成果・A/Bテストタブ</a>の成果ページの書き方を確かめます（例: 完了ページの URL が /thanks/ なら <code>/thanks/</code>）。</p></div></div>
+        <div class="step"><div class="step-number">2</div><div class="step-content"><p>バナーが「表示中」か確かめます（停止中のバナーの成果は数えません）。</p></div></div>
+        <div class="step"><div class="step-number">3</div><div class="step-content"><p>同じブラウザで、バナーを表示させてから成果ページを開いて確かめます。</p></div></div>
+
+        <h3>A/B テストで、いつも同じパターンが出る</h3>
+        <p><strong>原因:</strong> 1人の訪問者には、最初に割り当てたパターンをずっと表示します。</p>
+        <div class="step"><div class="step-number">1</div><div class="step-content"><p>自分で両方を見るときは、編集画面のプレビューの「A / B」で切り替えます。</p></div></div>
+        <div class="step"><div class="step-number">2</div><div class="step-content"><p>ブラウザのプライベートウィンドウで開くと、改めて割り当てられます。</p></div></div>
+
+        <h3>毎日のログの削除が行われていない</h3>
+        <p><strong>原因:</strong> WordPress の予定の処理は、サイトが見られたときに動きます。見られる回数が少ないサイトでは、遅れることがあります。</p>
+        <div class="step"><div class="step-number">1</div><div class="step-content"><p>しばらく待つか、サイトのページを開いてから確かめます。</p></div></div>
+        <div class="step"><div class="step-number">2</div><div class="step-content"><p>すぐに消したいときは、<a href="stats.html">集計タブ</a>の「すべてのログを削除」を使います（すべてのログが消えます）。</p></div></div>
+
+        <h2>編集・設定に関すること</h2>
+        <h3>投稿・固定ページの検索で目的のページが出てこない</h3>
+        <p><strong>原因:</strong> 検索できるのは「投稿」と「固定ページ」だけです。非公開・予約中の記事は、読める権限のある人にだけ出ます。</p>
+        <div class="step"><div class="step-number">1</div><div class="step-content"><p>それ以外の種類のページは、「URL・パス」の欄に URL を書いて指定します。</p></div></div>
+
+        <h3>投稿・固定ページの検索で「見つかりませんでした」が続く</h3>
+        <p><strong>原因:</strong> 一致するページがないか、通信がうまくいっていません（長い間画面を開いたままにしてログインが切れた、など）。</p>
+        <div class="step"><div class="step-number">1</div><div class="step-content"><p>別の言葉で検索します。</p></div></div>
+        <div class="step"><div class="step-number">2</div><div class="step-content"><p>ページを読み込み直し、ログインが切れていればログインし直してから検索します。</p></div></div>
+
+        <h3>「読み込めませんでした。このプラグインで書き出したファイルを選んでください。」と出る</h3>
+        <p><strong>原因:</strong> 選んだファイルがこのプラグインで書き出したものではないか、5MB を超えています。</p>
+        <div class="step"><div class="step-number">1</div><div class="step-content"><p>設定タブの「ファイルをダウンロード」で書き出したファイルを選び直します。</p></div></div>
+
+        <h3>読み込んだバナーの画像が表示されない</h3>
+        <p><strong>原因:</strong> 読み込んだバナーは、書き出し元のサイトの画像の URL を使います。書き出し元の画像が消えていると表示されません。</p>
+        <div class="step"><div class="step-number">1</div><div class="step-content"><p>内容タブの「画像を選ぶ」で、このサイトの画像を選び直して保存します。</p></div></div>
+
+        <h3>設定を保存したら「保存しました。ただし Cookie の名前が空のため、だれも記録されません。」と出た</h3>
+        <p><strong>原因:</strong> 「同意した人だけ記録する」を選び、Cookie の名前を空のまま保存しました。</p>
+        <div class="step"><div class="step-number">1</div><div class="step-content"><p>Cookie の名前を入れて保存し直すか、「同意を確認せずに記録する」に戻します。</p></div></div>
+
+        <h2>動作要件</h2>
+        <table>
+            <thead>
+                <tr><th style="width:30%;">項目</th><th>要件</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>WordPress</td><td>6.0 以上</td></tr>
+                <tr><td>PHP</td><td>7.4 以上</td></tr>
+                <tr><td>ブラウザ（訪問者）</td><td>現在の主なブラウザ（Chrome・Edge・Firefox・Safari）</td></tr>
+                <tr><td>権限</td><td>バナーの作成・編集は投稿を書ける権限、集計と設定は管理者</td></tr>
+            </tbody>
+        </table>
+
+        <h2>動作要件と制限</h2>
+        <ul>
+            <li>回数の制限・閉じたあとの日数・A/B テストのパターンは、訪問者のブラウザに記録して守ります。ブラウザの記録を許していない環境では、回数の制限が効かず、表示が多くなることがあります。</li>
+            <li>1つのページで表示するバナーは1つだけです。</li>
+            <li>集計で選べる期間は、直近 7 日・30 日・90 日です。</li>
+            <li>書き出しファイルの読み込みは 5MB までです。</li>
+            <li>プラグインを削除すると、すべてのバナー・設定・ログが削除されます。</li>
+        </ul>
+
+        <nav class="page-nav">
+            <a href="glossary.html" class="prev">&laquo; 用語集</a>
+            <span></span>
+        </nav>
+
+        <footer class="manual-footer">
+            <p>作者: <a href="https://www.tsuyoshikashiwazaki.jp/profile/" target="_blank" rel="noopener">柏崎剛（Tsuyoshi Kashiwazaki）</a></p>
+            <p>プラグイン: Kashiwazaki SEO StayPop v1.0.0 | <a href="https://github.com/TsuyoshiKashiwazaki/wp-plugin-kashiwazaki-seo-staypop" target="_blank" rel="noopener">GitHub</a></p>
+        </footer>
+    </main>
+
+    <div class="lightbox"></div>
+    <script src="js/manual.js"></script>
+</body>
+</html>

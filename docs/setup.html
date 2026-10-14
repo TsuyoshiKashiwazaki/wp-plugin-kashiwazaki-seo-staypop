@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>インストール・初期設定 - Kashiwazaki SEO StayPop マニュアル</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <button class="hamburger-btn" aria-label="メニューを開く">&#9776;</button>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2 style="color:#fff;">SEO StayPop</h2>
+            <span class="version">v1.0.0</span>
+            <img src="images/main-visual.png" alt="" style="width:100%;border-radius:4px;margin-top:8px;">
+        </div>
+        <ul>
+            <li><a href="index.html">概要</a></li>
+            <li><a href="setup.html" class="active">インストール・初期設定</a></li>
+            <li><a href="banners.html">バナー一覧</a></li>
+            <li><a href="editor.html">編集画面の見方</a></li>
+            <li><a href="editor-content.html">内容タブ</a></li>
+            <li><a href="editor-design.html">デザインタブ</a></li>
+            <li><a href="editor-timing.html">表示のタイミングタブ</a></li>
+            <li><a href="editor-pages.html">表示するページタブ</a></li>
+            <li><a href="editor-schedule.html">回数・期間タブ</a></li>
+            <li><a href="editor-audience.html">出し分けタブ</a></li>
+            <li><a href="editor-measure.html">成果・A/Bテストタブ</a></li>
+            <li><a href="test-display.html">サイトでテスト表示</a></li>
+            <li><a href="formats.html">サイトでの表示</a></li>
+            <li><a href="stats.html">集計タブ</a></li>
+            <li><a href="settings.html">設定タブ</a></li>
+            <li><a href="glossary.html">用語集</a></li>
+            <li><a href="troubleshooting.html">トラブルシューティング</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <h1>インストール・初期設定</h1>
+        <p class="lead">プラグインのインストールから、最初のバナーを作って公開し、サイトで試すまでを順に説明します。</p>
+
+        <h2>インストール手順</h2>
+        <div class="step"><div class="step-number">1</div><div class="step-content"><p>管理画面の左メニューから<strong>「プラグイン」→「プラグインを追加」</strong>を開きます。</p></div></div>
+        <div class="step"><div class="step-number">2</div><div class="step-content"><p>右上の<strong>「プラグインのアップロード」</strong>をクリックし、プラグインの ZIP ファイルを選んで<strong>「今すぐインストール」</strong>をクリックします。</p></div></div>
+        <div class="step"><div class="step-number">3</div><div class="step-content"><p>インストールが終わったら<strong>「プラグインを有効化」</strong>をクリックします。管理画面の左メニューに<strong>「Kashiwazaki SEO StayPop」</strong>が追加されます。</p></div></div>
+
+        <figure class="screenshot">
+            <img src="images/screenshots/00-menu-location.png" alt="左メニューの Kashiwazaki SEO StayPop" class="lightbox-trigger">
+            <figcaption>左メニューに追加された「Kashiwazaki SEO StayPop」（メガホンのアイコン）</figcaption>
+        </figure>
+
+        <div class="callout callout-tip">
+            <p>プラグイン一覧の「Kashiwazaki SEO StayPop」の行にある<strong>「設定」</strong>リンクからも開けます。こちらは「設定」タブが開きます。</p>
+        </div>
+
+        <figure class="screenshot">
+            <img src="images/screenshots/01-plugin-list-settings-link.png" alt="プラグイン一覧の設定リンク" class="lightbox-trigger">
+            <figcaption>プラグイン一覧の「設定」リンク</figcaption>
+        </figure>
+
+        <h2>有効化したときに用意されるもの</h2>
+        <table>
+            <thead>
+                <tr><th style="width:35%;">項目</th><th>有効化直後の状態</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>バナー</td><td>まだありません。自分で作ります。</td></tr>
+                <tr><td>計測</td><td>オン（表示・クリック・閉じた・成果の回数を記録します）</td></tr>
+                <tr><td>訪問者の同意</td><td>同意を確認せずに記録する</td></tr>
+                <tr><td>トラッキング拒否</td><td>ブラウザで「トラッキング拒否」にしている人は記録しない</td></tr>
+                <tr><td>ログを残す期間</td><td>180 日（過ぎたログは毎日自動で削除します）</td></tr>
+            </tbody>
+        </table>
+
+        <div class="callout callout-note">
+            <p>有効化しただけでは、サイトには何も表示されません。バナーを作って<strong>公開</strong>したときに、はじめて表示が始まります。</p>
+        </div>
+
+        <h2>最初のバナーを公開するまで</h2>
+        <figure class="infographic">
+            <img src="images/infographics/setup-steps.png" alt="インストールからテスト表示までの6ステップ">
+            <figcaption>インストール → 有効化 → バナーを追加 → 内容とタイミングを決める → 公開 → テスト表示</figcaption>
+        </figure>
+
+        <div class="step"><div class="step-number">1</div><div class="step-content"><p>左メニューの<strong>「Kashiwazaki SEO StayPop」</strong>を開き、見出しの横の<strong>「バナーを追加」</strong>をクリックします。</p></div></div>
+        <div class="step"><div class="step-number">2</div><div class="step-content"><p>いちばん上の欄に、管理用の<strong>バナーの名前</strong>を入れます（サイトには表示されません）。</p></div></div>
+        <div class="step"><div class="step-number">3</div><div class="step-content"><p><a href="editor-content.html">「内容」タブ</a>で、見出し・説明文・ボタンの文言・ボタンのリンク先を入れます。<strong>テンプレート</strong>を選んで<strong>「この文言を入れる」</strong>を押すと、よくある文言が入ります。</p></div></div>
+        <div class="step"><div class="step-number">4</div><div class="step-content"><p><a href="editor-design.html">「デザイン」タブ</a>で表示形式を選びます。右のプレビューで見た目を確かめます。</p></div></div>
+        <div class="step"><div class="step-number">5</div><div class="step-content"><p><a href="editor-timing.html">「表示のタイミング」タブ</a>で、表示のきっかけを確かめます。最初から「マウスが画面の上端から外に出たとき（PC）」と「上に戻るスクロールをしたとき（スマホ）」がオンです。</p></div></div>
+        <div class="step"><div class="step-number">6</div><div class="step-content"><p>必要なら<a href="editor-pages.html">「表示するページ」</a>で購入完了ページなどを除外し、<a href="editor-schedule.html">「回数・期間」</a>で表示する回数を決めます。</p></div></div>
+        <div class="step"><div class="step-number">7</div><div class="step-content"><p>右の<strong>「公開」</strong>ボタンを押します。上部の<strong>「サイトに表示する」</strong>がオンなら、この時点で表示が始まります。</p></div></div>
+        <div class="step"><div class="step-number">8</div><div class="step-content"><p>プレビューの下の<strong>「サイトでテスト表示」</strong>を押し、サイトで実際に表示されることを確かめます（<a href="test-display.html">詳しくはこちら</a>）。</p></div></div>
+
+        <figure class="screenshot">
+            <img src="images/screenshots/07-editor-new.png" alt="新しいバナーの編集画面" class="lightbox-trigger">
+            <figcaption>「バナーを追加」を押したときの編集画面。新しいバナーは「サイトに表示する」が最初からオンです</figcaption>
+        </figure>
+
+        <div class="callout callout-tip">
+            <p><strong>おすすめの始め方:</strong> まずは表示形式を「下部バナー」か「隅からのスライド表示」にし、表示する回数を「1回の訪問につき1回まで」、閉じたあとは「7日は表示しない」（いずれも初期値）のまま公開すると、訪問者のじゃまになりにくいです。</p>
+        </div>
+
+        <h2>使える人（権限）</h2>
+        <table>
+            <thead>
+                <tr><th style="width:35%;">画面・操作</th><th>使える人</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>左メニュー・バナー一覧・編集画面</td><td>投稿を書ける権限のある人（寄稿者・投稿者・編集者・管理者）。一覧には、自分が編集できるバナーだけが表示されます。</td></tr>
+                <tr><td>バナーの公開</td><td>WordPress の投稿と同じく、公開できる権限のある人（投稿者以上）。寄稿者は下書きの保存までです。</td></tr>
+                <tr><td>集計タブ・設定タブ・一覧の「直近30日」の列</td><td>管理者だけ</td></tr>
+            </tbody>
+        </table>
+
+
+        <nav class="page-nav">
+            <a href="index.html" class="prev">&laquo; 概要</a>
+            <a href="banners.html" class="next">バナー一覧 &raquo;</a>
+        </nav>
+
+        <footer class="manual-footer">
+            <p>作者: <a href="https://www.tsuyoshikashiwazaki.jp/profile/" target="_blank" rel="noopener">柏崎剛（Tsuyoshi Kashiwazaki）</a></p>
+            <p>プラグイン: Kashiwazaki SEO StayPop v1.0.0 | <a href="https://github.com/TsuyoshiKashiwazaki/wp-plugin-kashiwazaki-seo-staypop" target="_blank" rel="noopener">GitHub</a></p>
+        </footer>
+    </main>
+
+    <div class="lightbox"></div>
+    <script src="js/manual.js"></script>
+</body>
+</html>

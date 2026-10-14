@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>デザインタブ - Kashiwazaki SEO StayPop マニュアル</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <button class="hamburger-btn" aria-label="メニューを開く">&#9776;</button>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2 style="color:#fff;">SEO StayPop</h2>
+            <span class="version">v1.0.0</span>
+            <img src="images/main-visual.png" alt="" style="width:100%;border-radius:4px;margin-top:8px;">
+        </div>
+        <ul>
+            <li><a href="index.html">概要</a></li>
+            <li><a href="setup.html">インストール・初期設定</a></li>
+            <li><a href="banners.html">バナー一覧</a></li>
+            <li><a href="editor.html">編集画面の見方</a></li>
+            <li><a href="editor-content.html">内容タブ</a></li>
+            <li><a href="editor-design.html" class="active">デザインタブ</a></li>
+            <li><a href="editor-timing.html">表示のタイミングタブ</a></li>
+            <li><a href="editor-pages.html">表示するページタブ</a></li>
+            <li><a href="editor-schedule.html">回数・期間タブ</a></li>
+            <li><a href="editor-audience.html">出し分けタブ</a></li>
+            <li><a href="editor-measure.html">成果・A/Bテストタブ</a></li>
+            <li><a href="test-display.html">サイトでテスト表示</a></li>
+            <li><a href="formats.html">サイトでの表示</a></li>
+            <li><a href="stats.html">集計タブ</a></li>
+            <li><a href="settings.html">設定タブ</a></li>
+            <li><a href="glossary.html">用語集</a></li>
+            <li><a href="troubleshooting.html">トラブルシューティング</a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <h1>デザインタブ</h1>
+        <p class="lead">バナーの出方（表示形式）と、幅・色・角の丸み・余白・文字の大きさ・背景の暗さを決めるタブです。</p>
+
+        <figure class="screenshot">
+            <img src="images/screenshots/13-tab-design.png" alt="デザインタブ" class="lightbox-trigger">
+            <figcaption>デザインタブ（中央ポップアップを選んだとき）</figcaption>
+        </figure>
+
+        <h2>項目の一覧</h2>
+        <table>
+            <thead>
+                <tr><th style="width:18%;">項目</th><th style="width:32%;">入力できる範囲</th><th style="width:18%;">初期値</th><th>表示される条件</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>表示形式</td><td>中央ポップアップ / 下部バナー / 隅からのスライド表示</td><td>中央ポップアップ</td><td>常に</td></tr>
+                <tr><td>隅の位置</td><td>右下 / 左下 / 右上 / 左上</td><td>右下</td><td>表示形式が「隅からのスライド表示」のとき</td></tr>
+                <tr><td>幅（PC）</td><td>200〜1200 px</td><td>520 px</td><td>表示形式が「下部バナー」以外のとき</td></tr>
+                <tr><td>幅（スマホ）</td><td>0〜1200 px（空欄で自動）</td><td>自動</td><td>表示形式が「下部バナー」以外のとき</td></tr>
+                <tr><td>色</td><td>背景・文字・ボタン・ボタンの文字</td><td>白・濃い灰色・青・白</td><td>常に</td></tr>
+                <tr><td>角の丸み</td><td>0〜60 px</td><td>12 px</td><td>常に</td></tr>
+                <tr><td>内側の余白</td><td>0〜80 px</td><td>24 px</td><td>常に</td></tr>
+                <tr><td>文字の大きさ</td><td>10〜32 px</td><td>16 px</td><td>常に</td></tr>
+                <tr><td>背景の暗さ</td><td>0〜100 %（5 % きざみ）</td><td>50 %</td><td>表示形式が「中央ポップアップ」のとき</td></tr>
+            </tbody>
+        </table>
+
+        <h2>表示形式</h2>
+        <p>バナーをどの形で出すかを、絵の付いたカードから選びます。訪問者から見た違いは<a href="formats.html">サイトでの表示</a>で詳しく説明します。</p>
+        <table>
+            <thead>
+                <tr><th style="width:20%;">表示形式</th><th>出方</th><th style="width:32%;">向いている使い方</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>中央ポップアップ</td><td>画面を暗くして、中央にバナーを出します。閉じるまで、ページの操作はできません。</td><td>どうしても見てほしい案内（期間限定のクーポンなど）</td></tr>
+                <tr><td>下部バナー</td><td>画面のいちばん下に横長の帯で出します。ページを読みながら閉じられます。</td><td>じゃまにしたくない案内（LINE 登録・メールマガジンなど）</td></tr>
+                <tr><td>隅からのスライド表示</td><td>画面の隅に小さなカードが滑り込みます。ページを読みながら閉じられます。</td><td>関連記事・問い合わせの案内など</td></tr>
+            </tbody>
+        </table>
+
+        <h2>隅の位置</h2>
+        <p>表示形式で「隅からのスライド表示」を選んだときだけ表示されます。右下・左下・右上・左上から選びます。</p>
+        <figure class="screenshot">
+            <img src="images/screenshots/14-design-corner.png" alt="隅からのスライド表示を選んだデザインタブ" class="lightbox-trigger">
+            <figcaption>「隅からのスライド表示」を選ぶと「隅の位置」が表示され、「背景の暗さ」は表示されなくなります</figcaption>
+        </figure>
+
+        <h2>幅</h2>
+        <ul>
+            <li>バナーの<strong>最大の幅</strong>です。画面のほうが狭いときは、画面に合わせて縮みます。</li>
+            <li><strong>スマホ</strong>の欄を空にすると、画面の幅に合わせます。スマホだけ細くしたいときに数字を入れます。</li>
+            <li>隅からのスライド表示は、大きな数字を入れても<strong>最大 380 px</strong>です。</li>
+            <li>下部バナーは画面の横幅いっぱいに表示するため、この項目は表示されません。</li>
+        </ul>
+        <h2>色</h2>
+        <p>4つの色見本を押すと、色を選ぶ画面が開きます。</p>
+        <table>
+            <thead>
+                <tr><th style="width:20%;">色</th><th>変わる場所</th><th style="width:20%;">初期値</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>背景</td><td>バナーの地の色</td><td>白</td></tr>
+                <tr><td>文字</td><td>見出し・説明文・サブリンクの文字の色</td><td>濃い灰色</td></tr>
+                <tr><td>ボタン</td><td>ボタンの地の色</td><td>青</td></tr>
+                <tr><td>ボタンの文字</td><td>ボタンの文字の色</td><td>白</td></tr>
+            </tbody>
+        </table>
+
+        <div class="callout callout-tip">
+            <p>背景と文字、ボタンとボタンの文字は、はっきり見分けられる色の組み合わせにしてください。薄い色どうしは読みにくくなります。</p>
+        </div>
+
+        <h2>角の丸み・内側の余白・文字の大きさ</h2>
+        <figure class="infographic">
+            <img src="images/infographics/design-values.png" alt="デザインの値がバナーのどこに効くか">
+            <figcaption>幅・角の丸み・内側の余白・文字の大きさ・背景の暗さ・色の効く場所</figcaption>
+        </figure>
+
+        <ul>
+            <li><strong>角の丸み:</strong> バナーの四隅の丸さです。0 で四角になります。<strong>下部バナーでは角は丸くなりません。</strong></li>
+            <li><strong>内側の余白:</strong> バナーの縁から中身までのすき間です。</li>
+            <li><strong>文字の大きさ:</strong> 説明文などの基準の大きさです。見出しはこれより一回り大きく表示されます。</li>
+        </ul>
+        <h2>背景の暗さ</h2>
+        <p>中央ポップアップのとき、バナーの後ろのページをどれくらい暗くするかです。0 % で暗くしません。100 % で真っ黒になります。</p>
+        <div class="callout callout-note">
+            <p>ここで変えた見た目は、右のプレビューにすぐ反映されます。実際の大きさで確かめたいときは、プレビューの「実物大で見る」を押します。</p>
+        </div>
+
+
+        <nav class="page-nav">
+            <a href="editor-content.html" class="prev">&laquo; 内容タブ</a>
+            <a href="editor-timing.html" class="next">表示のタイミングタブ &raquo;</a>
+        </nav>
+
+        <footer class="manual-footer">
+            <p>作者: <a href="https://www.tsuyoshikashiwazaki.jp/profile/" target="_blank" rel="noopener">柏崎剛（Tsuyoshi Kashiwazaki）</a></p>
+            <p>プラグイン: Kashiwazaki SEO StayPop v1.0.0 | <a href="https://github.com/TsuyoshiKashiwazaki/wp-plugin-kashiwazaki-seo-staypop" target="_blank" rel="noopener">GitHub</a></p>
+        </footer>
+    </main>
+
+    <div class="lightbox"></div>
+    <script src="js/manual.js"></script>
+</body>
+</html>
